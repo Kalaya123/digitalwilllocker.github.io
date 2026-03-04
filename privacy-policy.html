@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy – Digital Will Locker</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--cyan:#00D9FF;--electric:#00FFFF;--emerald:#10B981;--dark:#0A2540;--border:rgba(0,217,255,0.18);--card:rgba(0,217,255,0.05);--soft:#94A3B8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:linear-gradient(180deg,#0A2540,#0D3A5C,#0F4D75,#0D3A5C,#0A2540);background-attachment:fixed;color:#cce8f0;font-family:'Exo 2',sans-serif;min-height:100vh;}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,217,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,217,255,.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(10,37,64,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:14px 5%;}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;max-width:1000px;margin:0 auto;}
+.logo{font-family:'Orbitron',monospace;font-size:.9rem;font-weight:800;color:var(--cyan);display:flex;align-items:center;gap:8px;}
+.logo img{width:28px;height:28px;}
+.back{color:var(--cyan);text-decoration:none;font-size:.85rem;padding:7px 14px;border:1px solid rgba(0,217,255,.3);border-radius:8px;transition:.2s;}
+.back:hover{background:rgba(0,217,255,.1);}
+.container{max-width:820px;margin:0 auto;padding:110px 5% 80px;position:relative;z-index:1;}
+.page-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,217,255,.1);border:1px solid rgba(0,217,255,.3);border-radius:30px;padding:7px 18px;font-size:.75rem;color:var(--cyan);letter-spacing:1.5px;font-weight:700;margin-bottom:24px;}
+.page-title{font-family:'Orbitron',monospace;font-size:2rem;font-weight:800;color:#fff;margin-bottom:8px;}
+.updated{font-size:.8rem;color:var(--soft);margin-bottom:40px;}
+.highlight-box{background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.3);border-radius:14px;padding:22px 26px;margin-bottom:36px;}
+.highlight-box h3{font-family:'Orbitron',monospace;font-size:.88rem;color:#10B981;margin-bottom:10px;}
+.highlight-box p{font-size:.86rem;color:#cce8f0;line-height:1.75;}
+h2{font-family:'Orbitron',monospace;font-size:1rem;color:var(--cyan);margin:36px 0 14px;letter-spacing:.5px;}
+p{font-size:.88rem;color:var(--soft);line-height:1.8;margin-bottom:14px;}
+ul{margin:10px 0 14px 0;padding-left:0;list-style:none;}
+ul li{font-size:.86rem;color:var(--soft);line-height:1.7;padding:4px 0 4px 18px;position:relative;}
+ul li::before{content:"✓";position:absolute;left:0;color:var(--emerald);}
+ul.cross li::before{content:"✗";color:#FF4444;}
+.contact-box{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-top:36px;}
+.contact-box h3{font-family:'Orbitron',monospace;font-size:.88rem;color:#fff;margin-bottom:12px;}
+.contact-box a{color:var(--cyan);text-decoration:none;}
+.contact-box a:hover{text-decoration:underline;}
+footer{border-top:1px solid var(--border);padding:28px 5%;text-align:center;position:relative;z-index:1;}
+footer p{font-size:.76rem;color:#2a4a5a;}
+footer a{color:var(--cyan);}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <div class="logo"><img src="logo.svg" alt="Logo">DIGITAL WILL LOCKER</div>
+    <a href="index.html" class="back">&#8592; Home</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="page-badge">&#128274; PRIVACY POLICY</div>
+  <div class="page-title">Privacy Policy</div>
+  <p class="updated">Last updated: March 2025 &nbsp;|&nbsp; Effective: March 2025</p>
+
+  <div class="highlight-box">
+    <h3>&#9989; Our Core Privacy Promise</h3>
+    <p>Digital Will Locker is built on a zero-knowledge, offline-first architecture. <strong>We do not collect, store, transmit, or have access to any of your personal data, vault contents, or documents.</strong> Your data lives only on your device, encrypted with AES-256, and never leaves it.</p>
+  </div>
+
+  <h2>1. Information We Do NOT Collect</h2>
+  <p>We want to be completely transparent. The following data is <strong>never collected by us:</strong></p>
+  <ul class="cross">
+    <li>Your vault contents, documents, wills, or files</li>
+    <li>Your master password or biometric data</li>
+    <li>Your 12-word recovery phrase</li>
+    <li>Your payment card details stored in the app</li>
+    <li>Your emergency contact information</li>
+    <li>Your location or device identifiers</li>
+    <li>Your browsing or app usage behavior</li>
+    <li>Any personally identifiable information from inside the vault</li>
+  </ul>
+
+  <h2>2. How Your Data Is Stored</h2>
+  <p>All data you enter into Digital Will Locker is stored exclusively on your device:</p>
+  <ul>
+    <li>AES-256 military-grade encryption for all vault data</li>
+    <li>PBKDF2 password hashing with 10,000 iterations</li>
+    <li>Biometric data handled by your device secure enclave only</li>
+    <li>Zero cloud storage — no servers, no backups by us</li>
+    <li>100% offline — no internet connection required for core features</li>
+  </ul>
+
+  <h2>3. App Permissions We Request</h2>
+  <p>The app may request the following device permissions:</p>
+  <ul>
+    <li><strong>Biometrics:</strong> For fingerprint/face ID login — handled by your device only</li>
+    <li><strong>Storage:</strong> To save and access encrypted files locally on your device</li>
+    <li><strong>Microphone:</strong> Only for the optional AI Voice Chat feature (Groq API)</li>
+    <li><strong>Notifications:</strong> For Dead Man's Switch check-in reminders only</li>
+    <li><strong>Camera:</strong> Optional — for scanning documents to store in vault</li>
+  </ul>
+
+  <h2>4. AI Features &amp; Third-Party Services</h2>
+  <p>The optional AI Voice Chat feature uses the Groq API for voice transcription and AI responses. When you use this feature:</p>
+  <ul>
+    <li>Your voice audio is sent to Groq for transcription (opt-in only)</li>
+    <li>Groq processes audio per their privacy policy at groq.com/privacy</li>
+    <li>No vault data is ever sent to Groq or any AI service</li>
+    <li>You can use the entire app without ever using the AI features</li>
+  </ul>
+
+  <h2>5. In-App Purchases</h2>
+  <p>Subscriptions are processed through Google Play or Apple App Store. We never see or store your payment information. All billing is handled entirely by Google or Apple under their respective privacy policies.</p>
+
+  <h2>6. Dead Man's Switch</h2>
+  <p>The Dead Man's Switch sends notifications to your designated emergency contacts if you miss a check-in. These notifications are sent from your device directly. We do not have access to your contact list or notification content.</p>
+
+  <h2>7. Children's Privacy</h2>
+  <p>Digital Will Locker is not intended for use by children under 13 years of age. We do not knowingly collect any information from children.</p>
+
+  <h2>8. Changes to This Policy</h2>
+  <p>We may update this privacy policy from time to time. We will notify users of any significant changes through the app. Continued use of the app after changes constitutes acceptance of the new policy.</p>
+
+  <h2>9. Your Rights</h2>
+  <ul>
+    <li>Right to know what data we hold (we hold none)</li>
+    <li>Right to delete your data (uninstall the app)</li>
+    <li>Right to data portability (export your encrypted vault)</li>
+    <li>Right to opt out of AI features at any time</li>
+  </ul>
+
+  <div class="contact-box">
+    <h3>&#128231; Contact Us About Privacy</h3>
+    <p style="color:var(--soft);font-size:.85rem;line-height:1.75;">
+      For any privacy-related questions or concerns, contact us at:<br><br>
+      &#128274; Email: <a href="mailto:privacy@digitalwilllocker.com">privacy@digitalwilllocker.com</a><br>
+      &#9993; General: <a href="mailto:support@digitalwilllocker.com">support@digitalwilllocker.com</a><br>
+      &#128196; Legal: <a href="mailto:legal@digitalwilllocker.com">legal@digitalwilllocker.com</a><br><br>
+      We aim to respond to all privacy inquiries within 48 hours.
+    </p>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Digital Will Locker. All rights reserved. |
+    <a href="index.html">Home</a> &middot;
+    <a href="support.html">Support</a> &middot;
+    <a href="terms.html">Terms of Service</a>
+  </p>
+</footer>
+</body>
+</html>

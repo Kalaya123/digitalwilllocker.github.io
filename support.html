@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support – Digital Will Locker</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--cyan:#00D9FF;--electric:#00FFFF;--purple:#9D00FF;--emerald:#10B981;--gold:#FFD700;--dark:#0A2540;--border:rgba(0,217,255,0.18);--card:rgba(0,217,255,0.05);--soft:#94A3B8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:linear-gradient(180deg,#0A2540,#0D3A5C,#0F4D75,#0D3A5C,#0A2540);background-attachment:fixed;color:#cce8f0;font-family:'Exo 2',sans-serif;min-height:100vh;}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,217,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,217,255,.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(10,37,64,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:14px 5%;}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;max-width:1000px;margin:0 auto;}
+.logo{font-family:'Orbitron',monospace;font-size:.9rem;font-weight:800;color:var(--cyan);display:flex;align-items:center;gap:8px;}
+.logo img{width:28px;height:28px;}
+.back{color:var(--cyan);text-decoration:none;font-size:.85rem;padding:7px 14px;border:1px solid rgba(0,217,255,.3);border-radius:8px;transition:.2s;}
+.back:hover{background:rgba(0,217,255,.1);}
+.container{max-width:900px;margin:0 auto;padding:110px 5% 80px;position:relative;z-index:1;}
+.s-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,217,255,.1);border:1px solid rgba(0,217,255,.3);border-radius:30px;padding:7px 18px;font-size:.75rem;color:var(--cyan);letter-spacing:1.5px;font-weight:700;margin-bottom:24px;}
+.page-title{font-family:'Orbitron',monospace;font-size:2rem;font-weight:800;color:#fff;margin-bottom:8px;}
+.page-sub{font-size:.9rem;color:var(--soft);margin-bottom:44px;}
+/* Contact Cards */
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:56px;}
+.contact-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;text-align:center;transition:.3s;}
+.contact-card:hover{border-color:rgba(0,217,255,.4);transform:translateY(-4px);}
+.cc-icon{font-size:2rem;margin-bottom:12px;}
+.contact-card h3{font-family:'Orbitron',monospace;font-size:.78rem;color:#fff;margin-bottom:8px;}
+.contact-card p{font-size:.8rem;color:var(--soft);margin-bottom:12px;line-height:1.6;}
+.contact-card a{color:var(--cyan);text-decoration:none;font-size:.82rem;font-weight:600;}
+.contact-card a:hover{text-decoration:underline;}
+/* Contact Form */
+.form-section{background:rgba(0,217,255,.04);border:1px solid var(--border);border-radius:20px;padding:40px;margin-bottom:56px;}
+.section-title{font-family:'Orbitron',monospace;font-size:1.2rem;color:#fff;margin-bottom:8px;}
+.section-sub{font-size:.85rem;color:var(--soft);margin-bottom:30px;}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.form-group{display:flex;flex-direction:column;gap:7px;}
+.form-group.full{grid-column:1/-1;}
+.form-group label{font-size:.78rem;color:var(--cyan);font-weight:600;letter-spacing:.5px;}
+.form-group input,.form-group select,.form-group textarea{
+  background:rgba(0,217,255,.06);
+  border:1px solid rgba(0,217,255,.2);
+  border-radius:10px;padding:12px 14px;
+  color:#fff;font-family:'Exo 2',sans-serif;font-size:.88rem;
+  outline:none;transition:.2s;
+  width:100%;
+}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--cyan);background:rgba(0,217,255,.09);}
+.form-group select option{background:#0A2540;color:#fff;}
+.form-group textarea{resize:vertical;min-height:120px;}
+.form-note{font-size:.75rem;color:var(--soft);margin-top:6px;}
+.submit-btn{
+  margin-top:20px;width:100%;padding:14px;
+  background:linear-gradient(135deg,var(--cyan),var(--electric));
+  color:#001D3D;border:none;border-radius:12px;
+  font-family:'Exo 2',sans-serif;font-size:1rem;font-weight:700;
+  cursor:pointer;transition:.3s;
+}
+.submit-btn:hover{box-shadow:0 0 30px rgba(0,217,255,.4);transform:translateY(-2px);}
+.success-msg{display:none;background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.4);border-radius:12px;padding:16px;text-align:center;color:#10B981;font-weight:600;margin-top:16px;}
+/* FAQ */
+.faq-item{background:var(--card);border:1px solid var(--border);border-radius:12px;margin-bottom:10px;overflow:hidden;}
+.faq-item:hover{border-color:rgba(0,217,255,.3);}
+.faq-q{padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:.88rem;}
+.faq-q:hover{color:var(--cyan);}
+.faq-arrow{color:var(--cyan);transition:.3s;}
+.faq-a{padding:0 20px 16px;font-size:.84rem;color:var(--soft);line-height:1.75;display:none;}
+.faq-a.open{display:block;}
+.faq-arrow.rotated{transform:rotate(180deg);}
+footer{border-top:1px solid var(--border);padding:28px 5%;text-align:center;position:relative;z-index:1;}
+footer p{font-size:.76rem;color:#2a4a5a;}
+footer a{color:var(--cyan);}
+@media(max-width:600px){.form-grid{grid-template-columns:1fr;}.form-group.full{grid-column:1;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <div class="logo"><img src="logo.svg" alt="Logo">DIGITAL WILL LOCKER</div>
+    <a href="index.html" class="back">&#8592; Home</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="s-badge">&#128173; SUPPORT CENTER</div>
+  <div class="page-title">How Can We Help?</div>
+  <p class="page-sub">Find answers instantly or reach our team directly.</p>
+
+  <!-- Contact Cards -->
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="cc-icon">&#128231;</div>
+      <h3>Email Support</h3>
+      <p>Get help within 24 hours. We respond to every message.</p>
+      <a href="mailto:support@digitalwilllocker.com">support@digitalwilllocker.com</a>
+    </div>
+    <div class="contact-card">
+      <div class="cc-icon">&#128274;</div>
+      <h3>Security Issues</h3>
+      <p>Report security concerns to our dedicated security team.</p>
+      <a href="mailto:privacy@digitalwilllocker.com">privacy@digitalwilllocker.com</a>
+    </div>
+    <div class="contact-card">
+      <div class="cc-icon">&#128196;</div>
+      <h3>Legal &amp; Privacy</h3>
+      <p>Privacy policy, terms of service and legal enquiries.</p>
+      <a href="mailto:legal@digitalwilllocker.com">legal@digitalwilllocker.com</a>
+    </div>
+    <div class="contact-card">
+      <div class="cc-icon">&#128230;</div>
+      <h3>Download APK</h3>
+      <p>Direct Android APK download for your device.</p>
+      <a href="digitalwilllocker.apk">Download APK</a>
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="form-section">
+    <div class="section-title">&#9993; Send Us a Message</div>
+    <p class="section-sub">Fill in the form below and we will get back to you within 24 hours.</p>
+    <div class="form-grid">
+      <div class="form-group">
+        <label>YOUR NAME</label>
+        <input type="text" id="fname" placeholder="Your full name">
+      </div>
+      <div class="form-group">
+        <label>EMAIL ADDRESS</label>
+        <input type="email" id="femail" placeholder="your@email.com">
+      </div>
+      <div class="form-group">
+        <label>SUBJECT</label>
+        <select id="fsubject">
+          <option value="">Select a topic...</option>
+          <option>General Support</option>
+          <option>Account & Login Issues</option>
+          <option>Subscription & Billing</option>
+          <option>Dead Man's Switch Help</option>
+          <option>APK Download Help</option>
+          <option>Security Issue / Report</option>
+          <option>Privacy & Legal</option>
+          <option>Feature Request</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>APP VERSION</label>
+        <input type="text" id="fversion" placeholder="e.g. v1.0.0 (optional)">
+      </div>
+      <div class="form-group full">
+        <label>YOUR MESSAGE</label>
+        <textarea id="fmessage" placeholder="Describe your issue or question in detail..."></textarea>
+        <div class="form-note">&#128274; Your message is sent securely. We never share your information.</div>
+      </div>
+    </div>
+    <button class="submit-btn" onclick="sendForm()">&#128640; Send Message</button>
+    <div class="success-msg" id="successMsg">&#10003; Message sent! We will reply to your email within 24 hours.</div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section-title" id="faq">&#10067; Frequently Asked Questions</div>
+  <br>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggle(this)">Is my data really stored offline only? <span class="faq-arrow">&#9660;</span></div>
+    <div class="faq-a">Yes, absolutely. Digital Will Locker is 100% offline. All your data is stored exclusively on your device using AES-256 encryption. No data is ever sent to any server or cloud service. Your information never leaves your device.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggle(this)">What happens if I forget my master password? <span class="faq-arrow">&#9660;</span></div>
+    <div class="faq-a">You can recover your vault using your 12-word recovery phrase provided when you created your vault. Store it safely in a physical location. Without both your password AND recovery phrase, access cannot be recovered — this is by design for maximum security.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggle(this)">How does the Dead Man's Switch work? <span class="faq-arrow">&#9660;</span></div>
+    <div class="faq-a">The Dead Man's Switch monitors your app check-in activity. If you don't check in within your set time period, it automatically notifies your designated emergency contacts. You can customize the check-in interval from daily to weekly in Settings.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggle(this)">Can I use the app on multiple devices? <span class="faq-arrow">&#9660;</span></div>
+    <div class="faq-a">Since the app is 100% offline, each device has its own separate vault. You can manually export and import your encrypted vault file to transfer between devices. Your subscription can be restored on the same account.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggle(this)">What encryption does the app use? <span class="faq-arrow">&#9660;</span></div>
+    <div class="faq-a">The app uses AES-256 encryption — the same standard used by governments and military worldwide. Your master password is hashed using PBKDF2 with 10,000 iterations, making brute-force attacks virtually impossible.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggle(this)">How do I cancel my subscription? <span class="faq-arrow">&#9660;</span></div>
+    <div class="faq-a">Subscriptions are managed through Google Play or Apple App Store. On Android: Google Play → Subscriptions → Digital Will Locker → Cancel. Cancel at least 24 hours before your renewal date.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggle(this)">How do I install the APK directly on Android? <span class="faq-arrow">&#9660;</span></div>
+    <div class="faq-a">1. Download the APK file from our website. 2. On Android go to Settings → Security → Enable "Install unknown apps". 3. Open the downloaded APK and tap Install. 4. You can disable unknown sources again after installation.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggle(this)">What AI features are in the app? <span class="faq-arrow">&#9660;</span></div>
+    <div class="faq-a">8 AI tools: Emergency AI Assistant, Document Organizer AI, Home Remedies, Noise Detector, Mood Listener, Cost of Living tracker, AI Travel Guide, and AI Image Generator. Voice chat powered by Groq Whisper and LLaMA lets you speak to the AI directly.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggle(this)">Is there a free version? <span class="faq-arrow">&#9660;</span></div>
+    <div class="faq-a">Yes! Free Plan includes 20 MB storage, 1 emergency contact, AES-256 encryption, 12-word recovery phrase, and document upload — forever free. Upgrade to Weekly ($3.99), Monthly Pro ($6.99), or Yearly Premium ($41.99) for more storage and features.</div>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Digital Will Locker. All rights reserved. |
+    <a href="index.html">Home</a> &middot;
+    <a href="privacy-policy.html">Privacy Policy</a> &middot;
+    <a href="terms.html">Terms</a>
+  </p>
+</footer>
+
+<script>
+function toggle(el){
+  var a=el.nextElementSibling,ar=el.querySelector('.faq-arrow');
+  a.classList.toggle('open');ar.classList.toggle('rotated');
+}
+function sendForm(){
+  var n=document.getElementById('fname').value;
+  var e=document.getElementById('femail').value;
+  var s=document.getElementById('fsubject').value;
+  var m=document.getElementById('fmessage').value;
+  if(!n||!e||!s||!m){alert('Please fill in all required fields!');return;}
+  var body=encodeURIComponent('Name: '+n+'\nEmail: '+e+'\nSubject: '+s+'\n\nMessage:\n'+m);
+  window.location.href='mailto:support@digitalwilllocker.com?subject='+encodeURIComponent('[Support] '+s)+'&body='+body;
+  document.getElementById('successMsg').style.display='block';
+}
+</script>
+</body>
+</html>
