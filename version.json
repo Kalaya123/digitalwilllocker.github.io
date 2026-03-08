@@ -1,7 +1,0 @@
-{
-  "version_code": 1,
-  "version_name": "1.0.0",
-  "release_notes": "Initial release — AES-256 encrypted vault, Dead Man Switch, AI Assistant, Biometric login",
-  "apk_url": "https://digitalwilllocker.com/digitalwilllocker.apk",
-  "force_update": false
-}
