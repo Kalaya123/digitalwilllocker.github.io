@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Digital Will Locker - Quantum-Grade Security Vault | AES-256 Encrypted</title>
+<link rel="canonical" href="https://digitalwilllocker.com">
+<meta name="description" content="Digital Will Locker — AES-256 encrypted offline security vault for Android. Store your digital will, documents, passwords and emergency contacts. 100% offline, zero cloud, zero knowledge.">
+<meta name="keywords" content="digital will, will locker, encrypted vault, AES-256, offline security, digital legacy, password manager, dead man switch, secure documents, android security app, digital will app, secure vault android">
+<meta name="author" content="Digital Will Locker">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#00D9FF">
+<meta name="google-site-verification" content="PASTE_YOUR_GOOGLE_CODE_HERE">
+<meta name="msvalidate.01" content="PASTE_YOUR_BING_CODE_HERE">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://digitalwilllocker.com">
+<meta property="og:title" content="Digital Will Locker - Quantum-Grade Security Vault">
+<meta property="og:description" content="AES-256 encrypted offline security vault. Store your digital will, documents and passwords. 100% offline, zero cloud.">
+<meta property="og:image" content="https://digitalwilllocker.com/banner1.jpg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="600">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Digital Will Locker - Quantum-Grade Security Vault">
+<meta name="twitter:description" content="AES-256 encrypted offline security vault for Android.">
+<meta name="twitter:image" content="https://digitalwilllocker.com/banner1.jpg">
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Digital Will Locker",
+  "operatingSystem": "Android",
+  "applicationCategory": "SecurityApplication",
+  "description": "AES-256 encrypted offline security vault for Android. Store digital wills, documents, passwords with zero cloud exposure.",
+  "url": "https://digitalwilllocker.com",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "ratingCount": "1"
+  }
+}
+</script>
+
+<!-- ── SEO META TAGS ── -->
+<meta name="description" content="Digital Will Locker — AES-256 encrypted offline security vault for Android. Store your digital will, documents, passwords and emergency contacts. 100% offline, zero cloud, zero knowledge.">
+<meta name="keywords" content="digital will, will locker, encrypted vault, AES-256, offline security, digital legacy, password manager, dead man switch, secure documents, android security app">
+<meta name="author" content="Digital Will Locker">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#00D9FF">
+<link rel="canonical" href="https://digitalwilllocker.com">
+
+<!-- ── OPEN GRAPH (Facebook, WhatsApp preview) ── -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://digitalwilllocker.com">
+<meta property="og:title" content="Digital Will Locker - Quantum-Grade Security Vault">
+<meta property="og:description" content="AES-256 encrypted offline vault. Store your digital will, documents and passwords. 100% offline, zero cloud.">
+<meta property="og:image" content="https://digitalwilllocker.com/banner1.jpg">
+<meta property="og:site_name" content="Digital Will Locker">
+
+<!-- ── TWITTER CARD ── -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Digital Will Locker - Quantum-Grade Security Vault">
+<meta name="twitter:description" content="AES-256 encrypted offline vault. Store your digital will, documents and passwords. 100% offline, zero cloud.">
+<meta name="twitter:image" content="https://digitalwilllocker.com/banner1.jpg">
+
+<!-- ── STRUCTURED DATA (Google Rich Results) ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Digital Will Locker",
+  "operatingSystem": "Android",
+  "applicationCategory": "SecurityApplication",
+  "description": "AES-256 encrypted offline security vault for Android. Store digital will, documents, passwords with zero cloud exposure.",
+  "url": "https://digitalwilllocker.com",
+  "downloadUrl": "https://digitalwilllocker.com",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Digital Will Locker",
+    "url": "https://digitalwilllocker.com"
+  }
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── EXACT APP COLORS from WelcomeScreen.kt ── */
+:root{
+  --cyan:#00D9FF;
+  --electric:#00FFFF;
+  --lightcyan:#00FFC8;
+  --purple:#9D00FF;
+  --emerald:#10B981;
+  --gold:#FFD700;
+  --bg1:#0A2540;
+  --bg2:#0D3A5C;
+  --bg3:#0F4D75;
+  --bg4:#125E8A;
+  --darkblue:#001D3D;
+  --card:rgba(13,58,92,0.7);
+  --cardborder:rgba(0,217,255,0.2);
+  --soft:#94A3B8;
+  --white:#ffffff;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html{scroll-behavior:smooth;}
+body{
+  background:linear-gradient(180deg,#0A2540,#0D3A5C,#0F4D75,#125E8A,#0F4D75,#0D3A5C,#0A2540);
+  background-attachment:fixed;
+  color:#cce8f0;
+  font-family:"Exo 2",sans-serif;
+  overflow-x:hidden;
+  min-height:100vh;
+}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;width:100%;z-index:999;
+  background:rgba(10,37,64,0.97);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(0,217,255,0.2);
+  padding:12px 4%;
+}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;max-width:1120px;margin:0 auto;}
+.nav-logo{
+  font-family:"Orbitron",monospace;font-weight:800;font-size:.88rem;
+  color:var(--cyan);letter-spacing:2px;
+  display:flex;align-items:center;gap:9px;
+}
+.nav-logo img{width:32px;height:32px;}
+.nav-links{display:flex;align-items:center;gap:2px;}
+.nav-links a{
+  color:var(--soft);text-decoration:none;
+  padding:7px 11px;border-radius:8px;font-size:.82rem;transition:.2s;
+}
+.nav-links a:hover{color:var(--cyan);background:rgba(0,217,255,.08);}
+.nav-cta{
+  background:linear-gradient(135deg,var(--cyan),var(--electric)) !important;
+  color:#001D3D !important;border-radius:20px !important;
+  font-weight:700 !important;padding:8px 18px !important;
+}
+
+/* ── HERO SLIDER ── */
+#hero-slider{
+  position:relative;
+  width:100%;
+  margin-top:57px;
+  overflow:hidden;
+  background:#0A2540;
+}
+.slides{
+  display:flex;
+  transition:transform .8s ease-in-out;
+  will-change:transform;
+}
+.slide{
+  min-width:100%;
+  width:100%;
+  flex-shrink:0;
+  overflow:hidden;
+}
+.slide img{
+  width:100%;
+  height:auto;
+  max-height:600px;
+  min-height:300px;
+  object-fit:cover;
+  display:block;
+}
+.sl-arrow{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:50px;height:50px;border-radius:50%;
+  background:rgba(0,0,0,.6);border:2px solid rgba(0,217,255,.5);
+  color:var(--cyan);font-size:1.8rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:.3s;z-index:10;line-height:1;
+}
+.sl-arrow:hover{background:rgba(0,217,255,.3);}
+.sl-prev{left:14px;}
+.sl-next{right:14px;}
+.sl-dots{
+  position:absolute;bottom:14px;left:50%;transform:translateX(-50%);
+  display:flex;gap:8px;z-index:10;
+}
+.sl-dot{
+  width:10px;height:10px;border-radius:50%;
+  background:rgba(255,255,255,.4);cursor:pointer;transition:.3s;
+  border:1px solid rgba(255,255,255,.3);
+}
+.sl-dot.active{background:var(--cyan);box-shadow:0 0 8px var(--cyan);}
+@media(max-width:768px){
+  #hero-slider{margin-top:53px;}
+  .slide img{max-height:280px;min-height:180px;}
+  .sl-arrow{width:36px;height:36px;font-size:1.3rem;}
+}
+
+/* ── HAMBURGER MENU ── */
+.hamburger{
+  display:none;flex-direction:column;gap:5px;
+  cursor:pointer;padding:4px;background:none;border:none;
+}
+.hamburger span{
+  width:24px;height:2px;
+  background:var(--cyan);border-radius:2px;transition:.3s;display:block;
+}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+.mobile-menu{
+  display:none;position:fixed;top:57px;left:0;right:0;
+  background:rgba(10,37,64,.98);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(0,217,255,.2);
+  z-index:998;padding:16px;
+  flex-direction:column;gap:4px;
+}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{
+  color:var(--soft);text-decoration:none;
+  padding:12px 16px;border-radius:10px;
+  font-size:.9rem;font-weight:500;transition:.2s;
+}
+.mobile-menu a:hover{color:var(--cyan);background:rgba(0,217,255,.08);}
+.mobile-menu .nav-cta{
+  background:linear-gradient(135deg,var(--cyan),var(--electric)) !important;
+  color:#001D3D !important;font-weight:700 !important;
+  text-align:center;margin-top:6px;
+}
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+}
+.stats-bar{
+  background:rgba(0,0,0,.25);
+  border-top:1px solid rgba(0,217,255,.15);
+  border-bottom:1px solid rgba(0,217,255,.15);
+  padding:22px 4%;
+}
+.stats-inner{
+  display:flex;justify-content:center;
+  max-width:900px;margin:0 auto;flex-wrap:wrap;
+}
+.stat{text-align:center;padding:8px 32px;border-right:1px solid rgba(0,217,255,.15);}
+.stat:last-child{border-right:none;}
+.stat-num{
+  font-family:"Orbitron",monospace;font-size:1.6rem;font-weight:900;
+  background:linear-gradient(135deg,var(--cyan),var(--electric));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.stat-lbl{font-size:.65rem;color:var(--soft);letter-spacing:2px;margin-top:3px;text-transform:uppercase;}
+
+/* ── VIDEO SECTION ── */
+.vid-sec{
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  background:#001D3D;
+}
+.vid-sec video{
+  width:100%;
+  height:600px;
+  object-fit:cover;
+  display:block;
+  opacity:.75;
+}
+.vid-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.2) 0%,rgba(10,37,64,.75) 100%);
+  display:flex;align-items:center;justify-content:center;
+  flex-direction:column;gap:16px;
+}
+.vid-title{
+  font-family:"Orbitron",monospace;
+  font-size:clamp(1rem,3vw,2rem);
+  font-weight:800;color:#fff;
+  text-shadow:0 0 30px rgba(0,217,255,.7);
+  text-align:center;padding:0 20px;
+  letter-spacing:2px;
+}
+.vid-badges{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;}
+@media(max-width:768px){
+  .vid-sec video{height:280px;}
+}
+
+/* ── SECTIONS ── */
+.sec{padding:70px 4%;}
+.sec-in{max-width:1120px;margin:0 auto;}
+.slbl{font-size:.7rem;color:var(--cyan);letter-spacing:2.5px;text-transform:uppercase;font-weight:700;text-align:center;margin-bottom:10px;}
+.stitle{
+  font-family:"Orbitron",monospace;
+  font-size:clamp(1.2rem,3vw,1.9rem);
+  font-weight:800;color:#fff;text-align:center;
+  margin-bottom:10px;line-height:1.25;
+}
+.ssub{text-align:center;color:var(--soft);margin:0 auto 44px;font-size:.88rem;line-height:1.65;max-width:480px;}
+
+/* ── APP MODULE CARDS (matches app dashboard exactly) ── */
+.modules-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:14px;
+}
+.mod-card{
+  background:rgba(13,58,92,.75);
+  border:1px solid rgba(0,217,255,.18);
+  border-radius:20px;padding:22px 14px;
+  text-align:center;transition:.3s;
+  cursor:default;
+}
+.mod-card:hover{
+  border-color:rgba(0,217,255,.5);
+  transform:translateY(-6px);
+  background:rgba(13,58,92,.9);
+  box-shadow:0 12px 35px rgba(0,0,0,.4),0 0 15px rgba(0,217,255,.08);
+}
+.mod-icon-wrap{
+  width:56px;height:56px;border-radius:16px;
+  display:grid;place-items:center;
+  margin:0 auto 12px;font-size:1.6rem;
+}
+.mod-name{font-family:"Orbitron",monospace;font-size:.65rem;color:#fff;font-weight:700;letter-spacing:.8px;margin-bottom:5px;}
+.mod-desc{font-size:.68rem;color:var(--soft);line-height:1.45;}
+
+/* ── FEATURE CARDS ── */
+.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;}
+.fc{
+  background:rgba(13,58,92,.6);
+  border:1px solid rgba(0,217,255,.16);
+  border-radius:16px;padding:24px;transition:.3s;
+  position:relative;overflow:hidden;
+}
+.fc::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--fc-c,var(--cyan)),transparent);
+  opacity:0;transition:.3s;
+}
+.fc:hover{border-color:rgba(0,217,255,.38);transform:translateY(-4px);}
+.fc:hover::before{opacity:1;}
+.fci{
+  width:46px;height:46px;border-radius:12px;
+  display:grid;place-items:center;font-size:1.3rem;margin-bottom:14px;
+}
+.fc h3{font-family:"Orbitron",monospace;font-size:.82rem;font-weight:700;color:#fff;margin-bottom:9px;}
+.fc p{font-size:.82rem;color:var(--soft);line-height:1.65;}
+
+/* ── AI CARDS ── */
+.ag{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;}
+.ac{
+  background:rgba(80,0,130,.15);
+  border:1px solid rgba(157,0,255,.22);
+  border-radius:14px;padding:20px;transition:.3s;
+  display:flex;align-items:flex-start;gap:13px;
+}
+.ac:hover{border-color:rgba(157,0,255,.48);transform:translateY(-3px);}
+.ac-ic{font-size:1.5rem;flex-shrink:0;margin-top:2px;}
+.ac h3{font-family:"Orbitron",monospace;font-size:.75rem;color:#d0a0ff;font-weight:700;margin-bottom:5px;}
+.ac p{font-size:.76rem;color:var(--soft);line-height:1.55;}
+
+/* ── STEPS ── */
+.stps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;}
+.stp{
+  text-align:center;padding:28px 16px;
+  background:rgba(13,58,92,.6);
+  border:1px solid rgba(0,217,255,.16);
+  border-radius:16px;transition:.3s;
+}
+.stp:hover{border-color:rgba(0,217,255,.38);transform:translateY(-4px);}
+.stp-n{
+  width:50px;height:50px;border-radius:50%;
+  border:2px solid var(--cyan);
+  display:grid;place-items:center;
+  font-family:"Orbitron",monospace;font-weight:800;font-size:1rem;
+  color:var(--cyan);margin:0 auto 14px;
+  box-shadow:0 0 18px rgba(0,217,255,.2);
+}
+.stp h3{font-family:"Orbitron",monospace;font-size:.8rem;color:#fff;margin-bottom:8px;}
+.stp p{font-size:.79rem;color:var(--soft);line-height:1.6;}
+
+/* ── SECURITY ── */
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:14px;}
+.sc{
+  background:rgba(13,58,92,.55);
+  border:1px solid rgba(0,217,255,.15);
+  border-radius:12px;padding:20px;text-align:center;
+}
+.sc-ic{font-size:1.7rem;margin-bottom:10px;}
+.sc h4{font-family:"Orbitron",monospace;font-size:.7rem;color:var(--cyan);margin-bottom:7px;}
+.sc p{font-size:.75rem;color:var(--soft);line-height:1.55;}
+
+/* ── PRICING ── */
+.pg{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;}
+.pc{
+  background:rgba(13,58,92,.6);
+  border:1px solid rgba(0,217,255,.18);
+  border-radius:20px;padding:28px 20px;
+  text-align:center;transition:.3s;position:relative;overflow:hidden;
+}
+.pc:hover{transform:translateY(-6px);}
+.pc-glow{
+  position:absolute;top:-50px;left:50%;transform:translateX(-50%);
+  width:130px;height:90px;border-radius:50%;
+  filter:blur(32px);opacity:.28;pointer-events:none;
+}
+.pc.c-p{border-color:rgba(157,0,255,.4);background:rgba(60,0,100,.3);}
+.pc.c-c{border-color:rgba(0,217,255,.4);background:rgba(0,80,120,.25);}
+.pc.c-g{border-color:rgba(255,215,0,.3);background:rgba(80,60,0,.2);}
+.btag{
+  position:absolute;top:-1px;left:50%;transform:translateX(-50%);
+  background:linear-gradient(135deg,var(--cyan),var(--electric));
+  color:#001D3D;font-size:.62rem;font-weight:800;
+  padding:4px 16px;border-radius:0 0 10px 10px;
+  letter-spacing:2px;white-space:nowrap;
+}
+.pc-ic{font-size:1.9rem;margin-bottom:10px;}
+.pc h3{font-family:"Orbitron",monospace;font-size:.88rem;font-weight:800;color:#fff;margin-bottom:4px;}
+.pc-st{font-size:.7rem;color:var(--soft);margin-bottom:16px;}
+.pc-pr{font-family:"Orbitron",monospace;font-size:2.2rem;font-weight:900;margin-bottom:2px;}
+.pc-pd{font-size:.7rem;color:var(--soft);margin-bottom:5px;}
+.pc-or{font-size:.74rem;color:var(--soft);text-decoration:line-through;margin-bottom:4px;}
+.stag{
+  display:inline-block;background:rgba(16,185,129,.18);
+  color:#10B981;font-size:.65rem;font-weight:800;
+  padding:3px 10px;border-radius:10px;letter-spacing:1.5px;margin-bottom:16px;
+}
+.pc-dv{height:1px;background:rgba(0,217,255,.12);margin:14px 0;}
+.pc-fl{list-style:none;text-align:left;margin-bottom:22px;}
+.pc-fl li{
+  font-size:.76rem;color:#8ab4c2;
+  padding:4px 0 4px 18px;position:relative;line-height:1.4;
+}
+.pc-fl li::before{content:"\2713";position:absolute;left:0;color:var(--emerald);font-weight:700;}
+.bp{
+  display:block;padding:12px;border-radius:10px;
+  font-family:"Exo 2",sans-serif;font-weight:700;
+  font-size:.85rem;text-decoration:none;transition:.3s;
+  text-align:center;
+}
+.bp-gr{background:transparent;color:var(--emerald);border:2px solid var(--emerald);}
+.bp-gr:hover{background:rgba(16,185,129,.15);}
+.bp-cy{background:linear-gradient(135deg,var(--cyan),var(--electric));color:#001D3D;}
+.bp-cy:hover{box-shadow:0 0 22px rgba(0,217,255,.4);}
+.bp-pu{background:linear-gradient(135deg,var(--purple),#7B00CC);color:#fff;}
+.bp-pu:hover{box-shadow:0 0 22px rgba(157,0,255,.4);}
+.bp-go{background:linear-gradient(135deg,var(--gold),#FFA500);color:#001D3D;}
+.bp-go:hover{box-shadow:0 0 22px rgba(255,215,0,.4);}
+
+/* ── DOWNLOAD ── */
+.dl-sec{padding:70px 4%;}
+.dl-box{
+  max-width:620px;margin:0 auto;
+  background:linear-gradient(135deg,rgba(0,80,120,.35),rgba(80,0,130,.15));
+  border:1px solid rgba(0,217,255,.2);
+  border-radius:24px;padding:48px 36px;text-align:center;
+}
+.dl-ic{font-size:3.2rem;margin-bottom:14px;}
+.cbadge{
+  display:inline-block;
+  background:rgba(255,215,0,.12);border:1px solid rgba(255,215,0,.3);
+  color:var(--gold);font-size:.7rem;font-weight:800;
+  padding:5px 16px;border-radius:20px;letter-spacing:2px;margin-bottom:16px;
+}
+.dl-box h2{font-family:"Orbitron",monospace;font-size:1.4rem;color:#fff;margin-bottom:10px;}
+.dl-box>p{font-size:.86rem;color:var(--soft);line-height:1.7;margin-bottom:26px;}
+.store-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.sbtn{
+  display:flex;align-items:center;gap:9px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:12px;padding:12px 18px;
+  color:#fff;text-decoration:none;transition:.3s;
+  min-width:160px;
+}
+.sbtn:hover{background:rgba(0,217,255,.1);border-color:var(--cyan);transform:translateY(-2px);}
+.sb-ic{font-size:1.4rem;flex-shrink:0;}
+.sb-tp{font-size:.62rem;color:var(--soft);}
+.sb-nm{font-size:.88rem;font-weight:700;}
+.apk-btn{border-color:rgba(0,217,255,.28);background:rgba(0,217,255,.06);}
+.dl-nt{font-size:.7rem;color:var(--soft);margin-top:18px;opacity:.55;}
+
+/* ── FOOTER ── */
+footer{
+  background:rgba(0,0,0,.35);
+  border-top:1px solid rgba(0,217,255,.12);
+  padding:48px 4% 26px;
+}
+.fi{max-width:1120px;margin:0 auto;}
+.fg2{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+.f-logo{
+  font-family:"Orbitron",monospace;font-size:.9rem;
+  font-weight:800;color:var(--cyan);
+  margin-bottom:12px;display:flex;align-items:center;gap:8px;
+}
+.f-logo img{width:26px;height:26px;}
+.f-desc{font-size:.78rem;color:#3a6a7a;line-height:1.75;}
+.fc2 h4{font-family:"Orbitron",monospace;font-size:.68rem;color:#fff;margin-bottom:14px;letter-spacing:2px;}
+.fc2 a{display:block;font-size:.78rem;color:#3a6a7a;text-decoration:none;margin-bottom:9px;transition:.2s;}
+.fc2 a:hover{color:var(--cyan);}
+.fb{
+  border-top:1px solid rgba(0,217,255,.1);
+  padding-top:20px;display:flex;
+  justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:10px;
+}
+.fb p{font-size:.74rem;color:#2a4a5a;}
+.eb{display:flex;gap:8px;flex-wrap:wrap;}
+.eb span{
+  font-size:.66rem;color:#2a5a4a;
+  background:rgba(0,217,255,.04);
+  border:1px solid rgba(0,217,255,.1);
+  padding:3px 9px;border-radius:6px;
+}
+
+/* ── MOBILE FIXES ── */
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  .mobile-menu.open{display:flex;}
+  .fg2{grid-template-columns:1fr 1fr;}
+  .fg2>div:first-child{grid-column:1/-1;}
+  .stat{padding:10px 16px;border-right:none;border-bottom:1px solid rgba(0,217,255,.1);}
+  .stat:last-child{border-bottom:none;}
+  .stats-inner{flex-direction:column;}
+  .dl-box{padding:32px 18px;}
+  .sbtn{min-width:140px;}
+  .modules-grid{grid-template-columns:repeat(3,1fr);}
+  .pg{grid-template-columns:1fr;}
+  .slide img{height:220px;object-fit:fill;}
+  #hero-slider{margin-top:53px;}
+  .vid-sec video{height:200px;}
+  .vid-sec{max-height:200px;}
+}
+@media(max-width:400px){
+  .modules-grid{grid-template-columns:repeat(2,1fr);}
+  .hero-btns{flex-direction:column;align-items:center;}
+  .btn{width:100%;justify-content:center;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <img src="logo.svg" alt="Digital Will Locker Logo">
+      DIGITAL WILL LOCKER
+    </div>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#ai">AI Tools</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#download">Download</a>
+      <a href="support.html">Support</a>
+      <a href="#pricing" class="nav-cta">Get Started</a>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#features" onclick="closeMenu()">Features</a>
+  <a href="#ai" onclick="closeMenu()">AI Tools</a>
+  <a href="#pricing" onclick="closeMenu()">Pricing</a>
+  <a href="#download" onclick="closeMenu()">Download</a>
+  <a href="support.html" onclick="closeMenu()">Support</a>
+  <a href="#pricing" class="nav-cta" onclick="closeMenu()">Get Started</a>
+</div>
+
+<!-- ── FULL WIDTH HERO BANNER SLIDER ── -->
+<div id="hero-slider">
+  <div class="slides" id="slides">
+    <div class="slide"><img src="banner1.jpg" alt="Digital Will Locker"></div>
+    <div class="slide"><img src="banner2.jpg" alt="Secure Your Digital Legacy"></div>
+    <div class="slide"><img src="banner3.jpg" alt="Military Grade Encryption"></div>
+    <div class="slide"><img src="banner4.jpg" alt="Dead Man Switch"></div>
+  </div>
+  <button class="sl-arrow sl-prev" onclick="slideMove(-1)">&#8249;</button>
+  <button class="sl-arrow sl-next" onclick="slideMove(1)">&#8250;</button>
+  <div class="sl-dots">
+    <div class="sl-dot active" onclick="slideTo(0)"></div>
+    <div class="sl-dot" onclick="slideTo(1)"></div>
+    <div class="sl-dot" onclick="slideTo(2)"></div>
+    <div class="sl-dot" onclick="slideTo(3)"></div>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat"><div class="stat-num">AES-256</div><div class="stat-lbl">Military Encryption</div></div>
+    <div class="stat"><div class="stat-num">100%</div><div class="stat-lbl">Offline Only</div></div>
+    <div class="stat"><div class="stat-num">PBKDF2</div><div class="stat-lbl">10K Iterations</div></div>
+    <div class="stat"><div class="stat-num">ZERO</div><div class="stat-lbl">Cloud Exposure</div></div>
+  </div>
+</div>
+
+<!-- APP MODULES matching exact app dashboard -->
+<div class="sec">
+  <div class="sec-in">
+    <div class="slbl">Inside The App</div>
+    <div class="stitle">6 Core Modules + 8 AI Tools</div>
+    <div class="ssub">Everything encrypted, everything offline</div>
+    <div class="modules-grid">
+      <div class="mod-card">
+        <div class="mod-icon-wrap" style="background:linear-gradient(135deg,#0088AA,#00AABB)">&#128274;</div>
+        <div class="mod-name">Vault</div>
+        <div class="mod-desc">256-bit AES Active</div>
+      </div>
+      <div class="mod-card">
+        <div class="mod-icon-wrap" style="background:linear-gradient(135deg,#5500CC,#7700EE)">&#128196;</div>
+        <div class="mod-name">Documents</div>
+        <div class="mod-desc">PDF &amp; Images</div>
+      </div>
+      <div class="mod-card">
+        <div class="mod-icon-wrap" style="background:linear-gradient(135deg,#CC2200,#EE3300)">&#128179;</div>
+        <div class="mod-name">Cards</div>
+        <div class="mod-desc">Encrypted Cards</div>
+      </div>
+      <div class="mod-card">
+        <div class="mod-icon-wrap" style="background:linear-gradient(135deg,#0044CC,#0066EE)">&#128101;</div>
+        <div class="mod-name">Contacts</div>
+        <div class="mod-desc">Emergency</div>
+      </div>
+      <div class="mod-card">
+        <div class="mod-icon-wrap" style="background:linear-gradient(135deg,#CC2200,#EE3300)">&#9201;</div>
+        <div class="mod-name">Dead Man</div>
+        <div class="mod-desc">Auto-Alert</div>
+      </div>
+      <div class="mod-card">
+        <div class="mod-icon-wrap" style="background:linear-gradient(135deg,#334455,#445566)">&#9881;</div>
+        <div class="mod-name">Settings</div>
+        <div class="mod-desc">Security Config</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── VIDEO MIDDLE (after 6 modules) ── -->
+<div class="vid-sec">
+  <video autoplay muted loop playsinline disablePictureInPicture>
+    <source src="bg.mp4" type="video/mp4">
+  </video>
+  <div class="vid-overlay">
+    <div class="vid-title">YOUR VAULT. YOUR RULES. ZERO CLOUD.</div>
+    <div class="vid-badges">
+      <div class="tbadge"><div class="tdot" style="background:var(--cyan)"></div>AES-256</div>
+      <div class="tbadge"><div class="tdot" style="background:var(--electric)"></div>Offline Only</div>
+      <div class="tbadge"><div class="tdot" style="background:var(--purple)"></div>Zero Cloud</div>
+    </div>
+  </div>
+</div>
+
+<div class="sec" id="features">
+  <div class="sec-in">
+    <div class="slbl">Core Features</div>
+    <div class="stitle">Military-Grade Security<br>For Your Digital Life</div>
+    <div class="ssub">Every feature built around one principle: your data never leaves your device</div>
+    <div class="fg">
+      <div class="fc" style="--fc-c:var(--cyan)"><div class="fci" style="background:rgba(0,217,255,.1)">&#128274;</div><h3>Protected Vault</h3><p>256-bit AES encryption active at all times. Zero-knowledge &#8212; even we cannot access your data.</p></div>
+      <div class="fc" style="--fc-c:var(--purple)"><div class="fci" style="background:rgba(157,0,255,.1)">&#9201;</div><h3>Dead Man's Switch</h3><p>Miss a check-in and it automatically notifies all emergency contacts securely.</p></div>
+      <div class="fc" style="--fc-c:var(--emerald)"><div class="fci" style="background:rgba(16,185,129,.1)">&#128070;</div><h3>Biometric Auth</h3><p>Fingerprint and Face ID. Handled by your device secure enclave &#8212; we never see your biometrics.</p></div>
+      <div class="fc" style="--fc-c:var(--cyan)"><div class="fci" style="background:rgba(0,217,255,.1)">&#128196;</div><h3>Document Organizer AI</h3><p>AI-powered categorization for PDFs and images. Auto-sorts wills, IDs, and contracts.</p></div>
+      <div class="fc" style="--fc-c:var(--gold)"><div class="fci" style="background:rgba(255,215,0,.1)">&#129302;</div><h3>AI Emergency Assistant</h3><p>Guides loved ones step-by-step through accessing your vault and managing your estate.</p></div>
+      <div class="fc" style="--fc-c:var(--purple)"><div class="fci" style="background:rgba(157,0,255,.1)">&#128273;</div><h3>12-Word Recovery</h3><p>Military-style BIP39 recovery phrase. Forget password? Your 12 words restore everything.</p></div>
+      <div class="fc" style="--fc-c:var(--emerald)"><div class="fci" style="background:rgba(16,185,129,.1)">&#128179;</div><h3>Encrypted Cards</h3><p>Store bank accounts and credit cards with zero cloud exposure. Locally only.</p></div>
+      <div class="fc" style="--fc-c:var(--cyan)"><div class="fci" style="background:rgba(0,217,255,.1)">&#128737;</div><h3>Login Protection</h3><p>5 failed attempts locks account for 5 minutes. Brute-force attacks impossible.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── VIDEO SECTION ── -->
+
+<div class="sec" id="ai">
+  <div class="sec-in">
+    <div class="slbl">AI-Powered Tools</div>
+    <div class="stitle">8 Built-In AI Features</div>
+    <div class="ssub">Advanced AI built directly into the app</div>
+    <div class="ag">
+      <div class="ac"><div class="ac-ic">&#128680;</div><div><h3>Emergency AI</h3><p>Instant AI guidance for emergencies and secure vault access protocols.</p></div></div>
+      <div class="ac"><div class="ac-ic">&#128193;</div><div><h3>Doc Organizer AI</h3><p>Automatically categorizes and tags all uploaded documents.</p></div></div>
+      <div class="ac"><div class="ac-ic">&#127807;</div><div><h3>Home Remedies</h3><p>AI-powered health guidance and natural home remedy suggestions.</p></div></div>
+      <div class="ac"><div class="ac-ic">&#128266;</div><div><h3>Noise Detector</h3><p>Smart ambient noise detection and real-time monitoring.</p></div></div>
+      <div class="ac"><div class="ac-ic">&#128522;</div><div><h3>Mood Listener</h3><p>AI that helps you track and improve your emotional wellbeing.</p></div></div>
+      <div class="ac"><div class="ac-ic">&#128176;</div><div><h3>Cost of Living</h3><p>Smart financial tracker for managing everyday expenses.</p></div></div>
+      <div class="ac"><div class="ac-ic">&#9992;</div><div><h3>AI Travel Guide</h3><p>Personalized travel recommendations and destination guides.</p></div></div>
+      <div class="ac"><div class="ac-ic">&#127912;</div><div><h3>AI Image Generator</h3><p>Create stunning AI-generated images directly inside the app.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="sec" id="how">
+  <div class="sec-in">
+    <div class="slbl">Getting Started</div>
+    <div class="stitle">Up &amp; Running In Minutes</div>
+    <div class="ssub">Four steps to protect your digital legacy forever</div>
+    <div class="stps">
+      <div class="stp"><div class="stp-n">01</div><h3>Download App</h3><p>Install from Samsung, Huawei, APKPure, Amazon or direct APK download.</p></div>
+      <div class="stp"><div class="stp-n">02</div><h3>Create Vault</h3><p>Set up encrypted vault with biometric auth and save your 12-word recovery phrase.</p></div>
+      <div class="stp"><div class="stp-n">03</div><h3>Store Everything</h3><p>Add wills, documents, passwords, payment cards, and emergency contacts.</p></div>
+      <div class="stp"><div class="stp-n">04</div><h3>Activate Switch</h3><p>Configure Dead Man Switch check-in interval. Legacy protected forever.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-in">
+    <div class="slbl">Security Architecture</div>
+    <div class="stitle">How We Keep You Safe</div>
+    <div class="ssub">Every layer of protection explained</div>
+    <div class="sg">
+      <div class="sc"><div class="sc-ic">&#128272;</div><h4>AES-256</h4><p>Same encryption used by governments and military worldwide.</p></div>
+      <div class="sc"><div class="sc-ic">&#129516;</div><h4>PBKDF2</h4><p>10,000 iterations makes brute-force attacks impossible.</p></div>
+      <div class="sc"><div class="sc-ic">&#128245;</div><h4>100% Offline</h4><p>No internet required. All data stored locally only.</p></div>
+      <div class="sc"><div class="sc-ic">&#9729;</div><h4>Zero Cloud</h4><p>We have no servers with your data. Truly zero-knowledge.</p></div>
+      <div class="sc"><div class="sc-ic">&#128070;</div><h4>Biometric Lock</h4><p>Device enclave manages biometrics. We never see them.</p></div>
+      <div class="sc"><div class="sc-ic">&#128273;</div><h4>Recovery Phrase</h4><p>12-word BIP39 phrase. The only key we never have.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="sec" id="pricing">
+  <div class="sec-in">
+    <div class="slbl">Plans &amp; Pricing</div>
+    <div class="stitle">Pick Your Plan</div>
+    <div class="ssub">Start free forever. Upgrade anytime.</div>
+    <div class="pg">
+      <div class="pc">
+        <div class="pc-glow" style="background:var(--emerald)"></div>
+        <div class="pc-ic">&#127327;</div><h3>Free Plan</h3>
+        <div class="pc-st">20 MB &#183; 1 Contact</div>
+        <div class="pc-pr" style="color:var(--emerald)">Free</div>
+        <div class="pc-pd">forever</div>
+        <div class="pc-dv"></div>
+        <ul class="pc-fl">
+          <li>20 MB Secure Storage</li><li>1 Emergency Contact</li>
+          <li>AES-256 Encryption</li><li>Password Protection</li>
+          <li>12-Word Recovery Phrase</li><li>Document Upload (PDF, Images)</li>
+          <li>100% Offline Security</li>
+        </ul>
+        <a href="#download" class="bp bp-gr">Start Free</a>
+      </div>
+      <div class="pc c-c">
+        <div class="pc-glow" style="background:var(--cyan)"></div>
+        <div class="pc-ic">&#128241;</div><h3>Weekly Starter</h3>
+        <div class="pc-st">1 GB &#183; 3 Contacts</div>
+        <div class="pc-pr" style="color:var(--cyan)">$3.99</div>
+        <div class="pc-pd">per week</div>
+        <div class="pc-dv"></div>
+        <ul class="pc-fl">
+          <li>1 GB Secure Storage</li><li>3 Emergency Contacts</li>
+          <li>Biometric Auth</li><li>Basic Dead Man Switch</li>
+          <li>Auto-Lock Protection</li><li>Payment Card Storage</li>
+          <li>AI Emergency Assistant</li><li>100% Offline</li>
+        </ul>
+        <a href="#download" class="bp bp-cy">Get Weekly Starter</a>
+      </div>
+      <div class="pc c-p">
+        <div class="btag">&#11088; BEST VALUE</div>
+        <div class="pc-glow" style="background:var(--purple)"></div>
+        <div class="pc-ic">&#128142;</div><h3>Monthly Pro</h3>
+        <div class="pc-st">5 GB &#183; 5 Contacts</div>
+        <div class="pc-pr" style="color:#B44FFF">$6.99</div>
+        <div class="pc-pd">per month</div>
+        <div class="stag">SAVE 56% vs Weekly</div>
+        <div class="pc-dv"></div>
+        <ul class="pc-fl">
+          <li>5 GB Secure Storage</li><li>5 Emergency Contacts</li>
+          <li>Advanced Dead Man Switch</li><li>Customizable Auto-Lock</li>
+          <li>PBKDF2 (10K iterations)</li><li>Emergency Unlock Feature</li>
+          <li>Failed Login Protection</li><li>Priority Support (24hr)</li>
+        </ul>
+        <a href="#download" class="bp bp-pu">Get Monthly Pro</a>
+      </div>
+      <div class="pc c-g">
+        <div class="pc-glow" style="background:var(--gold)"></div>
+        <div class="pc-ic">&#128081;</div><h3>Yearly Premium</h3>
+        <div class="pc-st">20 GB &#183; Unlimited Contacts</div>
+        <div class="pc-or">USD $83.88/yr</div>
+        <div class="pc-pr" style="color:var(--gold)">$41.99</div>
+        <div class="pc-pd">per year &#183; only $3.50/mo</div>
+        <div class="stag">SAVE 50%</div>
+        <div class="pc-dv"></div>
+        <ul class="pc-fl">
+          <li>20 GB Secure Storage</li><li>Unlimited Contacts</li>
+          <li>Advanced Dead Man Switch</li><li>Digital Will &amp; Testament</li>
+          <li>Unlimited Payment Cards</li><li>AI Emergency Assistant</li>
+          <li>Lifetime Updates</li><li>Priority Support (24hr)</li>
+        </ul>
+        <a href="#download" class="bp bp-go">Get Yearly Premium</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── VIDEO BOTTOM ── -->
+<div class="vid-sec">
+  <video autoplay muted loop playsinline disablePictureInPicture>
+    <source src="bg.mp4" type="video/mp4">
+  </video>
+  <div class="vid-overlay">
+    <div class="vid-title">PROTECT YOUR DIGITAL LEGACY TODAY</div>
+    <div class="vid-badges">
+      <div class="tbadge"><div class="tdot" style="background:var(--cyan)"></div>Free Download</div>
+      <div class="tbadge"><div class="tdot" style="background:var(--emerald)"></div>100% Offline</div>
+      <div class="tbadge"><div class="tdot" style="background:var(--gold)"></div>Zero Knowledge</div>
+    </div>
+  </div>
+</div>
+
+<div class="dl-sec" id="download">
+  <div class="dl-box">
+    <div class="dl-ic">&#128241;</div>
+    <div class="cbadge">DOWNLOAD THE APP</div>
+    <h2>Get Digital Will Locker</h2>
+    <p>Free to download. Available on Samsung, Huawei, APKPure, Amazon and direct APK.</p>
+    <div class="store-btns">
+      <a href="#" class="sbtn"><div class="sb-ic">&#128241;</div><div><div class="sb-tp">GET IT ON</div><div class="sb-nm">Samsung Galaxy Store</div></div></a>
+      <a href="#" class="sbtn"><div class="sb-ic">&#127775;</div><div><div class="sb-tp">AVAILABLE ON</div><div class="sb-nm">Huawei AppGallery</div></div></a>
+      <a href="#" class="sbtn"><div class="sb-ic">&#128230;</div><div><div class="sb-tp">DOWNLOAD ON</div><div class="sb-nm">APKPure</div></div></a>
+      <a href="#" class="sbtn"><div class="sb-ic">&#128233;</div><div><div class="sb-tp">SHOP AT</div><div class="sb-nm">Amazon Appstore</div></div></a>
+      <a href="digitalwilllocker.apk" class="sbtn apk-btn"><div class="sb-ic">&#128230;</div><div><div class="sb-tp">DIRECT DOWNLOAD</div><div class="sb-nm">Download APK</div></div></a>
+    </div>
+    <p class="dl-nt">Free to download &#183; No credit card required &#183; 100% offline</p>
+  </div>
+</div>
+
+<footer>
+  <div class="fi">
+    <div class="fg2">
+      <div>
+        <div class="f-logo">
+          <img src="logo.svg" alt="logo">
+          DIGITAL WILL LOCKER
+        </div>
+        <p class="f-desc">Quantum-grade security vault. AES-256 encrypted, 100% offline, zero cloud storage. Your data never leaves your device.</p>
+      </div>
+      <div class="fc2"><h4>Product</h4><a href="#features">Features</a><a href="#ai">AI Tools</a><a href="#pricing">Pricing</a><a href="#download">Download</a></div>
+      <div class="fc2"><h4>Legal</h4><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
+      <div class="fc2"><h4>Support</h4><a href="support.html">Help Center</a><a href="support.html#faq">FAQ</a><a href="/cdn-cgi/l/email-protection#8af9fffafae5f8fecaeee3ede3feebe6fde3e6e6e6e5e9e1eff8a4e9e5e7">Email Us</a></div>
+    </div>
+    <div class="fb">
+      <p>&#169; 2025 Digital Will Locker. All rights reserved.</p>
+      <div class="eb"><span>&#128272; AES-256</span><span>&#128245; Offline Only</span><span>&#9729; Zero Cloud</span></div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+// ── HAMBURGER MENU ──
+function toggleMenu(){
+  var m=document.getElementById("mobileMenu");
+  var h=document.getElementById("hamburger");
+  m.classList.toggle("open");
+  h.classList.toggle("open");
+}
+function closeMenu(){
+  document.getElementById("mobileMenu").classList.remove("open");
+  document.getElementById("hamburger").classList.remove("open");
+}
+
+// ── SLIDER ──
+// ── SLIDER ──
+var slIdx=0,slTotal=4,slTimer=null;
+function slideTo(n){
+  slIdx=(n+slTotal)%slTotal;
+  document.getElementById("slides").style.transform="translateX(-"+slIdx*100+"%)";
+  document.querySelectorAll(".sl-dot").forEach(function(d,i){d.classList.toggle("active",i===slIdx);});
+}
+function slideMove(dir){slideTo(slIdx+dir);}
+function slStart(){
+  if(slTimer)clearInterval(slTimer);
+  slTimer=setInterval(function(){slideTo(slIdx+1);},5000);
+}
+slStart();
+var hs=document.getElementById("hero-slider");
+if(hs){
+  hs.addEventListener("mouseenter",function(){if(slTimer)clearInterval(slTimer);});
+  hs.addEventListener("mouseleave",slStart);
+  var tx=0;
+  hs.addEventListener("touchstart",function(e){tx=e.touches[0].clientX;if(slTimer)clearInterval(slTimer);},{passive:true});
+  hs.addEventListener("touchend",function(e){
+    var diff=tx-e.changedTouches[0].clientX;
+    if(Math.abs(diff)>40){slideTo(slIdx+(diff>0?1:-1));}
+    slStart();
+  },{passive:true});
+}
+
+// ── SMOOTH SCROLL ──
+document.querySelectorAll("a[href^='#']").forEach(function(a){
+  a.addEventListener("click",function(e){
+    var target=document.querySelector(this.getAttribute("href"));
+    if(target){e.preventDefault();target.scrollIntoView({behavior:"smooth"});}
+  });
+});
+</script>
+</body>
+</html>
