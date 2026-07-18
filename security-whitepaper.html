@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Whitepaper – Digital Will Locker</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--cyan:#00D9FF;--electric:#00FFFF;--emerald:#10B981;--gold:#FFD700;--dark:#0A2540;--border:rgba(0,217,255,0.18);--card:rgba(0,217,255,0.05);--soft:#94A3B8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:linear-gradient(180deg,#0A2540,#0D3A5C,#0F4D75,#0D3A5C,#0A2540);background-attachment:fixed;color:#cce8f0;font-family:'Exo 2',sans-serif;min-height:100vh;}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,217,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,217,255,.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(10,37,64,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:14px 5%;}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;max-width:1000px;margin:0 auto;}
+.logo{font-family:'Orbitron',monospace;font-size:.9rem;font-weight:800;color:var(--cyan);display:flex;align-items:center;gap:8px;}
+.logo img{width:28px;height:28px;}
+.back{color:var(--cyan);text-decoration:none;font-size:.85rem;padding:7px 14px;border:1px solid rgba(0,217,255,.3);border-radius:8px;transition:.2s;}
+.back:hover{background:rgba(0,217,255,.1);}
+.container{max-width:820px;margin:0 auto;padding:110px 5% 80px;position:relative;z-index:1;}
+.page-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,217,255,.1);border:1px solid rgba(0,217,255,.3);border-radius:30px;padding:7px 18px;font-size:.75rem;color:var(--cyan);letter-spacing:1.5px;font-weight:700;margin-bottom:24px;}
+.page-title{font-family:'Orbitron',monospace;font-size:2rem;font-weight:800;color:#fff;margin-bottom:8px;}
+.updated{font-size:.8rem;color:var(--soft);margin-bottom:40px;}
+.highlight-box{background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.3);border-radius:14px;padding:22px 26px;margin-bottom:36px;}
+.highlight-box h3{font-family:'Orbitron',monospace;font-size:.88rem;color:#10B981;margin-bottom:10px;}
+.highlight-box p{font-size:.86rem;color:#cce8f0;line-height:1.75;}
+.info-box{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px 26px;margin:24px 0;}
+.info-box h3{font-family:'Orbitron',monospace;font-size:.82rem;color:var(--cyan);margin-bottom:10px;}
+.info-box p{font-size:.85rem;color:var(--soft);line-height:1.75;margin-bottom:0;}
+h2{font-family:'Orbitron',monospace;font-size:1rem;color:var(--cyan);margin:36px 0 14px;letter-spacing:.5px;}
+h3.sub{font-family:'Orbitron',monospace;font-size:.82rem;color:#fff;margin:22px 0 10px;}
+p{font-size:.88rem;color:var(--soft);line-height:1.8;margin-bottom:14px;}
+ul{margin:10px 0 14px 0;padding-left:0;list-style:none;}
+ul li{font-size:.86rem;color:var(--soft);line-height:1.7;padding:4px 0 4px 18px;position:relative;}
+ul li::before{content:"✓";position:absolute;left:0;color:var(--emerald);}
+.spec-table{width:100%;border-collapse:collapse;margin:16px 0;}
+.spec-table th{background:rgba(0,217,255,.1);color:var(--cyan);font-family:'Orbitron',monospace;font-size:.68rem;padding:10px 14px;text-align:left;border:1px solid rgba(0,217,255,.15);}
+.spec-table td{padding:10px 14px;font-size:.82rem;color:var(--soft);border:1px solid rgba(0,217,255,.1);}
+.spec-table tr:nth-child(even) td{background:rgba(0,217,255,.03);}
+.spec-table td:first-child{color:#fff;font-weight:600;}
+.contact-box{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-top:36px;}
+.contact-box h3{font-family:'Orbitron',monospace;font-size:.88rem;color:#fff;margin-bottom:12px;}
+.contact-box a{color:var(--cyan);text-decoration:none;}
+.contact-box a:hover{text-decoration:underline;}
+footer{border-top:1px solid var(--border);padding:28px 5%;text-align:center;position:relative;z-index:1;}
+footer p{font-size:.76rem;color:#2a4a5a;}
+footer a{color:var(--cyan);}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <div class="logo"><img src="logo.svg" alt="Logo">DIGITAL WILL LOCKER</div>
+    <a href="index.html" class="back">&#8592; Home</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="page-badge">&#128737; SECURITY WHITEPAPER</div>
+  <div class="page-title">Security Whitepaper</div>
+  <p class="updated">Last updated: July 2026</p>
+
+  <div class="highlight-box">
+    <h3>&#9989; The Short Version</h3>
+    <p>Digital Will Locker never sees your data. Everything you store — your will, documents, passwords, and payment card details — is encrypted with AES-256 and stays on your device. There is no cloud server holding a copy. There is nothing for us to leak, because we never receive it.</p>
+  </div>
+
+  <h2>1. Why Offline-First Matters</h2>
+  <p>Most password and document vault apps rely on cloud servers — meaning your sensitive data is encrypted, sent over the internet, and stored on someone else's infrastructure. That creates a target: if the provider's servers are ever breached, misconfigured, or subpoenaed, your data is exposed along with everyone else's.</p>
+  <p>Digital Will Locker takes a different approach. Your vault is created, encrypted, and stored entirely on your own device. There is no upload step. There is no server-side database of user vaults. An attacker cannot breach a server that doesn't hold your data.</p>
+
+  <h2>2. Encryption Architecture</h2>
+  <h3 class="sub">AES-256 Encryption</h3>
+  <p>All vault contents — documents, notes, payment card details, and emergency contact information — are encrypted using AES-256, the same encryption algorithm standard approved by the US National Institute of Standards and Technology (NIST) and widely used to protect classified and financial information worldwide.</p>
+
+  <h3 class="sub">PBKDF2 Password Hashing</h3>
+  <p>Your master password is never stored in plain text. It is processed through PBKDF2 with 10,000 iterations, a deliberately slow hashing method designed to make brute-force password guessing computationally expensive for an attacker, even if they somehow obtained the hashed value.</p>
+
+  <h3 class="sub">Biometric Authentication</h3>
+  <p>Fingerprint and face unlock are handled entirely by your device's secure hardware enclave (the same secure chip your phone uses for banking apps). Digital Will Locker never receives or stores raw biometric data — your device confirms your identity locally and only then unlocks the vault.</p>
+
+  <table class="spec-table">
+    <tr><th>Component</th><th>Method</th></tr>
+    <tr><td>Vault data encryption</td><td>AES-256</td></tr>
+    <tr><td>Password protection</td><td>PBKDF2, 10,000 iterations</td></tr>
+    <tr><td>Biometric login</td><td>Device secure enclave (on-device only)</td></tr>
+    <tr><td>Data storage location</td><td>100% on-device, zero cloud servers</td></tr>
+    <tr><td>Recovery method</td><td>12-word recovery phrase, user-held only</td></tr>
+  </table>
+
+  <h2>3. What We Do Not Have Access To</h2>
+  <p>Because of this architecture, the following simply do not exist on any server we control:</p>
+  <ul>
+    <li>Your vault contents, documents, or wills</li>
+    <li>Your master password or its hash</li>
+    <li>Your 12-word recovery phrase</li>
+    <li>Your biometric data</li>
+    <li>Your payment card details stored in the app</li>
+  </ul>
+  <p>If your device is lost and you have not backed up your vault file or recorded your recovery phrase, we cannot recover this data for you. This is a deliberate trade-off: the same design that prevents us from ever accessing your data also means we cannot bypass that protection on your behalf, even if you ask us to.</p>
+
+  <h2>4. The Dead Man's Switch, Explained Securely</h2>
+  <p>The Dead Man's Switch feature is designed to release specific vault items to a trusted contact only if you become unreachable for a period you define. It does not weaken the offline-first model:</p>
+  <ul>
+    <li>The app monitors your check-in activity locally based on your chosen inactivity period</li>
+    <li>If you miss check-ins, your trusted contact receives an emergency email notification only — not your data</li>
+    <li>They must call you twice and wait 24 hours, giving you a final chance to cancel if you're simply unreachable</li>
+    <li>Only if this full process completes does the app release the specific vault items you pre-configured for emergency access</li>
+    <li>Outside of this narrow, user-configured emergency workflow, vault data is never transmitted anywhere</li>
+  </ul>
+
+  <h2>5. Optional AI Features</h2>
+  <p>AI Voice Chat, AI Emergency Assistant, and Document Organizer AI are opt-in features that use a third-party AI service provider for processing. When enabled:</p>
+  <ul>
+    <li>Only the specific input you provide to that feature (e.g. voice audio) is sent to our AI provider — never your vault contents</li>
+    <li>You can use the entire core app, including the vault, Dead Man's Switch, and document storage, without ever enabling AI features</li>
+  </ul>
+
+  <h2>6. Reporting a Security Issue</h2>
+  <p>Found a security vulnerability? Please report it privately to us before disclosing it publicly, so we can investigate and fix it first.</p>
+
+  <div class="contact-box">
+    <h3>&#128231; Questions About This Whitepaper</h3>
+    <p style="color:var(--soft);font-size:.85rem;line-height:1.75;">
+      &#9993; General &amp; security reports: <a href="mailto:support@digitalwilllocker.com">support@digitalwilllocker.com</a><br><br>
+      For details on data handling and your privacy rights, see our <a href="privacy.html">Privacy Policy</a>.
+    </p>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Digital Will Locker. All rights reserved. |
+    <a href="index.html">Home</a> &middot;
+    <a href="privacy.html">Privacy Policy</a> &middot;
+    <a href="terms.html">Terms of Service</a>
+  </p>
+</footer>
+</body>
+</html>
