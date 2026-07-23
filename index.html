@@ -1878,8 +1878,13 @@ function dwlGetAnswer(q){
     return '📱 Current version: <strong>v1.0.8</strong><br>Package: com.swagon.digitalwilllocker<br><br>We update regularly with new features and security improvements!';
   }
 
+// Review / Feedback
+  if(q.match(/review|feedback|rate|rating|testimonial|experience|opinion/)){
+    return '⭐ <strong>We\'d love your feedback!</strong><br><br>Share your experience with Digital Will Locker — takes less than 1 minute:<br><br><a href="https://docs.google.com/forms/d/e/1FAIpQLSd6fJ-xG9iuex5IX38ow0FjjDYkG5FYzDHcrdOssM5w9UjPlA/viewform" style="color:#00D9FF;font-weight:700;" target="_blank">📝 Leave a Review</a><br><br>Thank you for supporting the app! 🙏';
+  }
+  
   // Default
-  return '🤔 I\'m not sure about that. Please contact our support team:<br><br>📧 <a href="mailto:support@digitalwilllocker.com" style="color:#00D9FF;">support@digitalwilllocker.com</a><br><br>Or ask me about: <strong>Download, Pricing, Security, Features, or Support</strong>! 😊';
+  return '🤔 I\'m not sure about that. Please contact our support team:<br><br>📧 <a href="mailto:support@digitalwilllocker.com" style="color:#00D9FF;">support@digitalwilllocker.com</a><br><br>Or ask me about: <strong>Download, Pricing, Security, Features, Support, or Reviews</strong>! 😊';
 }
 </script>
 </body>
