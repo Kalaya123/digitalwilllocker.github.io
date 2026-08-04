@@ -142,10 +142,11 @@ nav{
   color:var(--cyan);letter-spacing:2px;
   display:flex;align-items:center;gap:9px;
 }
-.nav-logo img{width:30px;height:30px;}
+.nav-logo img,.nav-logo svg{width:30px;height:30px;}
+.f-logo img,.f-logo svg{width:26px;height:26px;}
 @media(max-width:768px){
   .nav-logo{font-size:.55rem;letter-spacing:.5px;gap:6px;}
-  .nav-logo img{width:22px;height:22px;}
+  .nav-logo img,.nav-logo svg{width:22px;height:22px;}
   nav{padding:8px 3%;}
 }
 .nav-links{display:flex;align-items:center;gap:2px;}
@@ -937,7 +938,15 @@ footer{
 <nav>
   <div class="nav-inner">
     <div class="nav-logo">
-      <img src="logo.svg" alt="Digital Will Locker Logo">
+      <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-label="Digital Will Locker Logo">
+        <rect width="512" height="512" fill="#001229"/>
+        <path d="M155.62,112.64 A175,175 0 0 1 407.55,343.5" fill="none" stroke="#00D9FF" stroke-width="70"/>
+        <path d="M356.38,399.36 A175,175 0 0 1 104.45,168.5" fill="none" stroke="#00D9FF" stroke-width="70"/>
+        <path d="M256,175 L316,230 L288,300 L256,345 L224,300 L196,230 Z" fill="#FFFFFF"/>
+        <line x1="256" y1="195" x2="256" y2="290" stroke="#001229" stroke-width="8"/>
+        <circle cx="256" cy="295" r="8" fill="#001229"/>
+        <rect x="226" y="145" width="60" height="30" rx="4" fill="#FFFFFF"/>
+      </svg>
       DIGITAL WILL LOCKER
     </div>
     <div class="nav-links">
@@ -1451,7 +1460,15 @@ footer{
     <div class="fg2">
       <div>
         <div class="f-logo">
-          <img src="logo.svg" alt="logo">
+          <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-label="Digital Will Locker Logo">
+            <rect width="512" height="512" fill="#001229"/>
+            <path d="M155.62,112.64 A175,175 0 0 1 407.55,343.5" fill="none" stroke="#00D9FF" stroke-width="70"/>
+            <path d="M356.38,399.36 A175,175 0 0 1 104.45,168.5" fill="none" stroke="#00D9FF" stroke-width="70"/>
+            <path d="M256,175 L316,230 L288,300 L256,345 L224,300 L196,230 Z" fill="#FFFFFF"/>
+            <line x1="256" y1="195" x2="256" y2="290" stroke="#001229" stroke-width="8"/>
+            <circle cx="256" cy="295" r="8" fill="#001229"/>
+            <rect x="226" y="145" width="60" height="30" rx="4" fill="#FFFFFF"/>
+          </svg>
           DIGITAL WILL LOCKER
         </div>
         <p class="f-desc">AES-256 encrypted offline security vault. AES-256 encrypted, 100% offline, zero cloud storage. Your data never leaves your device.</p>
