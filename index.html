@@ -9,7 +9,7 @@
 <meta name="keywords" content="digital will, will locker, encrypted vault, AES-256, offline security, digital legacy, password manager, dead man switch, secure documents, android security app, digital will app, secure vault android">
 <meta name="author" content="Digital Will Locker">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#00D9FF">
+<meta name="theme-color" content="#FFFFFF">
 <meta name="google-site-verification" content="CMuwcfEQUexALVSE0QO3q1Wwi8eUKpE-68VLCKKWWs4">
 <meta name="msvalidate.01" content="A4FDE9F8723358B0569D067F76B76C97">
 <!-- Open Graph -->
@@ -53,7 +53,7 @@
 <meta name="keywords" content="digital will, will locker, encrypted vault, AES-256, offline security, digital legacy, password manager, dead man switch, secure documents, android security app">
 <meta name="author" content="Digital Will Locker">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#00D9FF">
+<meta name="theme-color" content="#FFFFFF">
 <link rel="canonical" href="https://digitalwilllocker.com">
 
 <!-- ── OPEN GRAPH (Facebook, WhatsApp preview) ── -->
@@ -97,31 +97,33 @@
 <style>
 /* ── EXACT APP COLORS from WelcomeScreen.kt ── */
 :root{
-  --cyan:#00D9FF;
-  --electric:#00FFFF;
-  --lightcyan:#00FFC8;
+  --cyan:#00D4FF;
+  --cyan-text:#0088B3;
+  --electric:#33DFFF;
+  --lightcyan:#00D4FF;
   --purple:#9D00FF;
-  --emerald:#10B981;
-  --gold:#FFD700;
-  --bg1:#0A2540;
-  --bg2:#0D3A5C;
-  --bg3:#0F4D75;
-  --bg4:#125E8A;
-  --darkblue:#001D3D;
-  --card:rgba(13,58,92,0.7);
-  --cardborder:rgba(0,217,255,0.2);
-  --soft:#94A3B8;
+  --emerald:#22C55E;
+  --gold:#C98A00;
+  --navy:#0A1F44;
+  --bg1:#FFFFFF;
+  --bg2:#F7FBFF;
+  --bg3:#EAF8FF;
+  --bg4:#DFF4FF;
+  --darkblue:#0A1F44;
+  --card:#FFFFFF;
+  --cardborder:#E2E8F0;
+  --soft:#4A5568;
   --white:#ffffff;
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
 html{scroll-behavior:smooth;}
 body{
-  background:#07111f;
+  background:#FFFFFF;
   background-image:
-    radial-gradient(ellipse at 50% 0%, rgba(0,60,120,0.25) 0%, transparent 60%),
-    radial-gradient(ellipse at 50% 100%, rgba(0,30,80,0.2) 0%, transparent 60%);
+    radial-gradient(ellipse at 50% 0%, rgba(0,212,255,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 100%, rgba(0,212,255,0.04) 0%, transparent 60%);
   background-attachment:fixed;
-  color:#cce8f0;
+  color:#4A5568;
   font-family:"Exo 2",sans-serif;
   overflow-x:hidden;
   min-height:100vh;
@@ -130,16 +132,17 @@ body{
 /* ── NAV ── */
 nav{
   position:fixed;top:0;width:100%;z-index:999;
-  background:rgba(7,17,31,0.97);
+  background:rgba(255,255,255,0.97);
   backdrop-filter:blur(20px);
   -webkit-backdrop-filter:blur(20px);
-  border-bottom:1px solid rgba(0,217,255,0.2);
+  border-bottom:1px solid #E2E8F0;
   padding:10px 4%;
+  box-shadow:0 1px 8px rgba(10,31,68,0.05);
 }
 .nav-inner{display:flex;justify-content:space-between;align-items:center;max-width:1120px;margin:0 auto;}
 .nav-logo{
   font-family:"Orbitron",monospace;font-weight:800;font-size:.88rem;
-  color:var(--cyan);letter-spacing:2px;
+  color:var(--navy);letter-spacing:2px;
   display:flex;align-items:center;gap:9px;
 }
 .nav-logo img,.nav-logo svg{width:30px;height:30px;}
@@ -154,10 +157,10 @@ nav{
   color:var(--soft);text-decoration:none;
   padding:7px 11px;border-radius:8px;font-size:.82rem;transition:.2s;
 }
-.nav-links a:hover{color:var(--cyan);background:rgba(0,217,255,.08);}
+.nav-links a:hover{color:var(--cyan-text);background:rgba(0,212,255,.08);}
 .nav-cta{
   background:linear-gradient(135deg,var(--cyan),var(--electric)) !important;
-  color:#001D3D !important;border-radius:20px !important;
+  color:#0A1F44 !important;border-radius:20px !important;
   font-weight:700 !important;padding:8px 18px !important;
 }
 
@@ -196,34 +199,34 @@ nav{
   display:flex;flex-direction:column;
   justify-content:center;
   padding:40px 5%;
-  background:linear-gradient(90deg,rgba(10,37,64,0.88) 0%,rgba(10,37,64,0.55) 50%,rgba(10,37,64,0.05) 100%);
+  background:linear-gradient(90deg,rgba(255,255,255,0.92) 0%,rgba(255,255,255,0.65) 50%,rgba(255,255,255,0.05) 100%);
   z-index:3;
 }
 .slide-overlay.right-align{
   align-items:flex-end;
-  background:linear-gradient(270deg,rgba(10,37,64,0.88) 0%,rgba(10,37,64,0.55) 50%,rgba(10,37,64,0.05) 100%);
+  background:linear-gradient(270deg,rgba(255,255,255,0.92) 0%,rgba(255,255,255,0.65) 50%,rgba(255,255,255,0.05) 100%);
   text-align:right;
 }
 .slide-overlay.center-align{
   align-items:center;
-  background:linear-gradient(180deg,rgba(10,37,64,0.7) 0%,rgba(10,37,64,0.5) 100%);
+  background:linear-gradient(180deg,rgba(255,255,255,0.88) 0%,rgba(255,255,255,0.6) 100%);
   text-align:center;
 }
 .ov-badge{
   display:inline-flex;align-items:center;gap:6px;
-  background:rgba(0,217,255,0.15);
-  border:1px solid rgba(0,217,255,0.4);
+  background:rgba(0,212,255,0.15);
+  border:1px solid rgba(0,212,255,0.4);
   border-radius:20px;padding:5px 14px;
-  font-size:.68rem;color:var(--cyan);font-weight:700;
+  font-size:.68rem;color:var(--cyan-text);font-weight:700;
   letter-spacing:2px;text-transform:uppercase;
   width:fit-content;margin-bottom:14px;
 }
 .ov-title{
   font-family:"Orbitron",monospace;
   font-size:clamp(1.1rem,2.8vw,2.2rem);
-  font-weight:800;color:#fff;
+  font-weight:800;color:#0A1F44;
   line-height:1.22;margin-bottom:10px;
-  text-shadow:0 2px 20px rgba(0,0,0,0.6);
+  text-shadow:0 1px 2px rgba(255,255,255,0.6);
   max-width:500px;
 }
 .ov-title span{
@@ -232,7 +235,7 @@ nav{
   background-clip:text;
 }
 .ov-sub{
-  color:rgba(255,255,255,0.82);
+  color:#4A5568;
   font-size:.85rem;line-height:1.65;
   margin-bottom:20px;max-width:420px;
 }
@@ -242,11 +245,11 @@ nav{
 }
 .ov-check{
   display:flex;align-items:center;gap:7px;
-  font-size:.78rem;color:rgba(255,255,255,0.88);font-weight:500;
+  font-size:.78rem;color:rgba(10,31,68,0.85);font-weight:500;
 }
 .ov-check::before{
-  content:"✔";color:var(--cyan);font-size:.7rem;
-  background:rgba(0,217,255,0.15);border-radius:50%;
+  content:"✔";color:var(--cyan-text);font-size:.7rem;
+  background:rgba(0,212,255,0.15);border-radius:50%;
   width:18px;height:18px;
   display:flex;align-items:center;justify-content:center;
   flex-shrink:0;
@@ -255,34 +258,34 @@ nav{
 .ov-btn-primary{
   display:inline-flex;align-items:center;gap:7px;
   background:linear-gradient(135deg,var(--cyan),var(--electric));
-  color:#001D3D;font-weight:800;font-size:.85rem;
+  color:#0A1F44;font-weight:800;font-size:.85rem;
   padding:12px 24px;border-radius:30px;
   text-decoration:none;transition:.25s;
-  box-shadow:0 4px 20px rgba(0,217,255,0.4);
+  box-shadow:0 4px 20px rgba(0,212,255,0.4);
   font-family:"Exo 2",sans-serif;
 }
-.ov-btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,217,255,0.6);}
+.ov-btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,212,255,0.6);}
 .ov-btn-secondary{
   display:inline-flex;align-items:center;gap:7px;
-  background:rgba(255,255,255,0.08);
-  color:#fff;font-weight:700;font-size:.85rem;
+  background:rgba(10,31,68,0.06);
+  color:#0A1F44;font-weight:700;font-size:.85rem;
   padding:11px 22px;border-radius:30px;
   text-decoration:none;transition:.25s;
-  border:2px solid rgba(255,255,255,0.3);
+  border:2px solid rgba(10,31,68,0.25);
   font-family:"Exo 2",sans-serif;
   backdrop-filter:blur(8px);
 }
-.ov-btn-secondary:hover{background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.5);transform:translateY(-2px);}
+.ov-btn-secondary:hover{background:rgba(10,31,68,0.12);border-color:rgba(10,31,68,0.4);transform:translateY(-2px);}
 
 .sl-arrow{
   position:absolute;top:50%;transform:translateY(-50%);
   width:50px;height:50px;border-radius:50%;
-  background:rgba(0,0,0,.6);border:2px solid rgba(0,217,255,.5);
+  background:rgba(0,0,0,.6);border:2px solid rgba(0,212,255,.5);
   color:var(--cyan);font-size:1.8rem;cursor:pointer;
   display:flex;align-items:center;justify-content:center;
   transition:.3s;z-index:10;line-height:1;
 }
-.sl-arrow:hover{background:rgba(0,217,255,.3);}
+.sl-arrow:hover{background:rgba(0,212,255,.3);}
 .sl-prev{left:14px;}
 .sl-next{right:14px;}
 .sl-dots{
@@ -318,7 +321,7 @@ nav{
     padding:12px 16px;
     justify-content:center;
     align-items:flex-start;
-    background:linear-gradient(90deg,rgba(6,13,26,0.92) 0%,rgba(6,13,26,0.6) 60%,rgba(6,13,26,0.1) 100%);
+    background:linear-gradient(90deg,rgba(255,255,255,0.94) 0%,rgba(255,255,255,0.65) 60%,rgba(255,255,255,0.1) 100%);
   }
   .ov-badge{font-size:.54rem;padding:3px 9px;margin-bottom:5px;letter-spacing:1px;}
   .ov-title{font-size:clamp(.75rem,3vw,1rem);margin-bottom:5px;max-width:55%;line-height:1.2;}
@@ -343,9 +346,9 @@ nav{
 .trust-bar-img{
   width:100%;
   overflow:hidden;
-  background:#07111f;
-  border-top:1px solid rgba(0,217,255,0.1);
-  border-bottom:1px solid rgba(0,217,255,0.1);
+  background:#FFFFFF;
+  border-top:1px solid rgba(0,212,255,0.1);
+  border-bottom:1px solid rgba(0,212,255,0.1);
   margin-top:8px;
   font-size:0;
   line-height:0;
@@ -366,38 +369,38 @@ nav{
 /* ── ABOUT SECTION ── */
 .about-sec{
   padding:70px 4%;
-  background:rgba(0,0,0,0.2);
-  border-top:1px solid rgba(0,217,255,0.1);
-  border-bottom:1px solid rgba(0,217,255,0.1);
+  background:#F7FBFF;
+  border-top:1px solid rgba(0,212,255,0.1);
+  border-bottom:1px solid rgba(0,212,255,0.1);
 }
 .about-inner{max-width:800px;margin:0 auto;text-align:center;}
 .about-inner .slbl{margin-bottom:12px;}
 .about-inner .stitle{margin-bottom:20px;}
 .about-card{
-  background:rgba(13,58,92,0.5);
-  border:1px solid rgba(0,217,255,0.15);
+  background:#FFFFFF;
+  border:1px solid rgba(0,212,255,0.15);
   border-radius:20px;padding:36px 40px;
   text-align:left;position:relative;overflow:hidden;
 }
 .about-card::before{
   content:"";position:absolute;
   top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;
-  background:radial-gradient(circle,rgba(0,217,255,0.08),transparent 70%);
+  background:radial-gradient(circle,rgba(0,212,255,0.08),transparent 70%);
 }
 .about-card p{
   font-size:.95rem;line-height:1.85;
-  color:rgba(204,232,240,0.9);margin-bottom:16px;
+  color:#4A5568;margin-bottom:16px;
 }
 .about-card p:last-child{margin-bottom:0;}
 .about-contact{
   display:inline-flex;align-items:center;gap:8px;
-  color:var(--cyan);font-weight:600;font-size:.88rem;
+  color:var(--cyan-text);font-weight:600;font-size:.88rem;
   text-decoration:none;
-  background:rgba(0,217,255,0.08);
-  border:1px solid rgba(0,217,255,0.2);
+  background:rgba(0,212,255,0.08);
+  border:1px solid rgba(0,212,255,0.2);
   border-radius:20px;padding:8px 18px;transition:.2s;margin-top:6px;
 }
-.about-contact:hover{background:rgba(0,217,255,0.15);}
+.about-contact:hover{background:rgba(0,212,255,0.15);}
 @media(max-width:768px){.about-card{padding:24px 20px;}}
 
 /* ── HAMBURGER MENU ── */
@@ -407,18 +410,19 @@ nav{
 }
 .hamburger span{
   width:24px;height:2px;
-  background:var(--cyan);border-radius:2px;transition:.3s;display:block;
+  background:var(--navy);border-radius:2px;transition:.3s;display:block;
 }
 .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
 .hamburger.open span:nth-child(2){opacity:0;}
 .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
 .mobile-menu{
   display:none;position:fixed;top:57px;left:0;right:0;
-  background:rgba(10,37,64,.98);
+  background:rgba(255,255,255,.98);
   backdrop-filter:blur(20px);
-  border-bottom:1px solid rgba(0,217,255,.2);
+  border-bottom:1px solid rgba(0,212,255,.2);
   z-index:998;padding:16px;
   flex-direction:column;gap:4px;
+  box-shadow:0 8px 20px rgba(10,31,68,0.08);
 }
 .mobile-menu.open{display:flex;}
 .mobile-menu a{
@@ -426,10 +430,10 @@ nav{
   padding:12px 16px;border-radius:10px;
   font-size:.9rem;font-weight:500;transition:.2s;
 }
-.mobile-menu a:hover{color:var(--cyan);background:rgba(0,217,255,.08);}
+.mobile-menu a:hover{color:var(--cyan-text);background:rgba(0,212,255,.08);}
 .mobile-menu .nav-cta{
   background:linear-gradient(135deg,var(--cyan),var(--electric)) !important;
-  color:#001D3D !important;font-weight:700 !important;
+  color:#0A1F44 !important;font-weight:700 !important;
   text-align:center;margin-top:6px;
 }
 @media(max-width:768px){
@@ -437,16 +441,16 @@ nav{
   .hamburger{display:flex;}
 }
 .stats-bar{
-  background:rgba(0,0,0,.25);
-  border-top:1px solid rgba(0,217,255,.15);
-  border-bottom:1px solid rgba(0,217,255,.15);
+  background:#F7FBFF;
+  border-top:1px solid rgba(0,212,255,.15);
+  border-bottom:1px solid rgba(0,212,255,.15);
   padding:22px 4%;
 }
 .stats-inner{
   display:flex;justify-content:center;
   max-width:900px;margin:0 auto;flex-wrap:wrap;
 }
-.stat{text-align:center;padding:8px 32px;border-right:1px solid rgba(0,217,255,.15);}
+.stat{text-align:center;padding:8px 32px;border-right:1px solid rgba(0,212,255,.15);}
 .stat:last-child{border-right:none;}
 .stat-num{
   font-family:"Orbitron",monospace;font-size:1.6rem;font-weight:900;
@@ -462,7 +466,7 @@ nav{
   width:100%;
   height:680px;
   overflow:hidden;
-  background:#001D3D;
+  background:#0A1F44;
 }
 .vid-sec video{
   position:absolute;
@@ -497,7 +501,7 @@ nav{
   font-family:"Orbitron",monospace;
   font-size:clamp(1rem,3vw,2rem);
   font-weight:800;color:#fff;
-  text-shadow:0 0 30px rgba(0,217,255,.7);
+  text-shadow:0 0 30px rgba(0,212,255,.7);
   text-align:center;padding:0 20px;
   letter-spacing:2px;
 }
@@ -505,7 +509,7 @@ nav{
 .tbadge{
   display:flex;align-items:center;gap:6px;
   background:rgba(0,0,0,.35);
-  border:1px solid rgba(0,217,255,.25);
+  border:1px solid rgba(0,212,255,.25);
   border-radius:20px;padding:6px 14px;
   font-size:.75rem;color:#fff;font-weight:600;
 }
@@ -521,15 +525,15 @@ nav{
 }
 .vid-play-btn{
   width:36px;height:36px;border-radius:50%;
-  background:rgba(0,217,255,.2);
-  border:1.5px solid rgba(0,217,255,.6);
+  background:rgba(0,212,255,.2);
+  border:1.5px solid rgba(0,212,255,.6);
   color:#fff;font-size:.9rem;
   cursor:pointer;
   display:flex;align-items:center;justify-content:center;
   transition:.2s;flex-shrink:0;
   -webkit-tap-highlight-color:transparent;
 }
-.vid-play-btn:hover{background:rgba(0,217,255,.4);}
+.vid-play-btn:hover{background:rgba(0,212,255,.4);}
 .vid-vol-btn{
   position:absolute;
   bottom:14px;
@@ -537,7 +541,7 @@ nav{
   z-index:20;
   width:38px;height:38px;border-radius:50%;
   background:rgba(0,0,0,.6);
-  border:1.5px solid rgba(0,217,255,.5);
+  border:1.5px solid rgba(0,212,255,.5);
   color:#fff;font-size:.9rem;
   cursor:pointer;
   display:flex;align-items:center;justify-content:center;
@@ -545,7 +549,7 @@ nav{
   -webkit-tap-highlight-color:transparent;
   touch-action:manipulation;
 }
-.vid-vol-btn:hover{background:rgba(0,217,255,.3);}
+.vid-vol-btn:hover{background:rgba(0,212,255,.3);}
 .vid-label{
   font-size:.7rem;color:rgba(255,255,255,.6);
   font-family:"Orbitron",monospace;letter-spacing:1px;
@@ -562,15 +566,15 @@ nav{
 .vid-bigplay.hidden{opacity:0;pointer-events:none;}
 .vid-bigplay-icon{
   width:70px;height:70px;border-radius:50%;
-  background:rgba(0,217,255,.2);
-  border:2px solid rgba(0,217,255,.7);
+  background:rgba(0,212,255,.2);
+  border:2px solid rgba(0,212,255,.7);
   display:flex;align-items:center;justify-content:center;
   font-size:1.8rem;color:#fff;
-  box-shadow:0 0 30px rgba(0,217,255,.4);
+  box-shadow:0 0 30px rgba(0,212,255,.4);
   transition:.2s;
 }
 .vid-bigplay:hover .vid-bigplay-icon{
-  background:rgba(0,217,255,.4);
+  background:rgba(0,212,255,.4);
   transform:scale(1.1);
 }
 @media(max-width:768px){
@@ -588,9 +592,9 @@ nav{
   width:200px;
   border-radius:16px;
   overflow:hidden;
-  border:2px solid rgba(0,217,255,.4);
-  box-shadow:0 0 30px rgba(0,217,255,.2),0 10px 40px rgba(0,0,0,.6);
-  background:#001D3D;
+  border:2px solid rgba(0,212,255,.4);
+  box-shadow:0 0 30px rgba(0,212,255,.2),0 10px 40px rgba(0,0,0,.6);
+  background:#0A1F44;
   transition:all .4s ease;
   cursor:pointer;
 }
@@ -629,8 +633,8 @@ nav{
   position:relative;
   z-index:10000;
 }
-#float-promo .fp-btn:hover{background:rgba(0,217,255,.4);}
-#float-promo .fp-btn:active{background:rgba(0,217,255,.6);transform:scale(.92);}
+#float-promo .fp-btn:hover{background:rgba(0,212,255,.4);}
+#float-promo .fp-btn:active{background:rgba(0,212,255,.6);transform:scale(.92);}
 #float-promo .fp-expand{
   position:absolute;
   bottom:8px;right:8px;
@@ -648,11 +652,11 @@ nav{
 /* ── SECTIONS ── */
 .sec{padding:70px 4%;}
 .sec-in{max-width:1120px;margin:0 auto;}
-.slbl{font-size:.7rem;color:var(--cyan);letter-spacing:2.5px;text-transform:uppercase;font-weight:700;text-align:center;margin-bottom:10px;}
+.slbl{font-size:.7rem;color:var(--cyan-text);letter-spacing:2.5px;text-transform:uppercase;font-weight:700;text-align:center;margin-bottom:10px;}
 .stitle{
   font-family:"Orbitron",monospace;
   font-size:clamp(1.2rem,3vw,1.9rem);
-  font-weight:800;color:#fff;text-align:center;
+  font-weight:800;color:#0A1F44;text-align:center;
   margin-bottom:10px;line-height:1.25;
 }
 .ssub{text-align:center;color:var(--soft);margin:0 auto 44px;font-size:.88rem;line-height:1.65;max-width:480px;}
@@ -664,46 +668,48 @@ nav{
   gap:14px;
 }
 .mod-card{
-  background:rgba(13,58,92,.75);
-  border:1px solid rgba(0,217,255,.18);
+  background:#FFFFFF;
+  border:1px solid #E2E8F0;
   border-radius:20px;padding:22px 14px;
   text-align:center;transition:.3s;
   cursor:default;
+  box-shadow:0 2px 10px rgba(10,31,68,0.05);
 }
 .mod-card:hover{
-  border-color:rgba(0,217,255,.5);
+  border-color:rgba(0,212,255,.5);
   transform:translateY(-6px);
-  background:rgba(13,58,92,.9);
-  box-shadow:0 12px 35px rgba(0,0,0,.4),0 0 15px rgba(0,217,255,.08);
+  background:#FFFFFF;
+  box-shadow:0 12px 30px rgba(10,31,68,.12),0 0 15px rgba(0,212,255,.1);
 }
 .mod-icon-wrap{
   width:56px;height:56px;border-radius:16px;
   display:grid;place-items:center;
   margin:0 auto 12px;font-size:1.6rem;
 }
-.mod-name{font-family:"Orbitron",monospace;font-size:.65rem;color:#fff;font-weight:700;letter-spacing:.8px;margin-bottom:5px;}
+.mod-name{font-family:"Orbitron",monospace;font-size:.65rem;color:#0A1F44;font-weight:700;letter-spacing:.8px;margin-bottom:5px;}
 .mod-desc{font-size:.68rem;color:var(--soft);line-height:1.45;}
 
 /* ── FEATURE CARDS ── */
 .fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;}
 .fc{
-  background:rgba(13,58,92,.6);
-  border:1px solid rgba(0,217,255,.16);
+  background:#FFFFFF;
+  border:1px solid #E2E8F0;
   border-radius:16px;padding:24px;transition:.3s;
   position:relative;overflow:hidden;
+  box-shadow:0 2px 10px rgba(10,31,68,0.05);
 }
 .fc::before{
   content:"";position:absolute;top:0;left:0;right:0;height:2px;
   background:linear-gradient(90deg,transparent,var(--fc-c,var(--cyan)),transparent);
   opacity:0;transition:.3s;
 }
-.fc:hover{border-color:rgba(0,217,255,.38);transform:translateY(-4px);}
+.fc:hover{border-color:rgba(0,212,255,.38);transform:translateY(-4px);}
 .fc:hover::before{opacity:1;}
 .fci{
   width:46px;height:46px;border-radius:12px;
   display:grid;place-items:center;font-size:1.3rem;margin-bottom:14px;
 }
-.fc h3{font-family:"Orbitron",monospace;font-size:.82rem;font-weight:700;color:#fff;margin-bottom:9px;}
+.fc h3{font-family:"Orbitron",monospace;font-size:.82rem;font-weight:700;color:#0A1F44;margin-bottom:9px;}
 .fc p{font-size:.82rem;color:var(--soft);line-height:1.65;}
 
 /* ── AI CARDS ── */
@@ -716,47 +722,50 @@ nav{
 }
 .ac:hover{border-color:rgba(157,0,255,.48);transform:translateY(-3px);}
 .ac-ic{font-size:1.5rem;flex-shrink:0;margin-top:2px;}
-.ac h3{font-family:"Orbitron",monospace;font-size:.75rem;color:#d0a0ff;font-weight:700;margin-bottom:5px;}
+.ac h3{font-family:"Orbitron",monospace;font-size:.75rem;color:#7C3AED;font-weight:700;margin-bottom:5px;}
 .ac p{font-size:.76rem;color:var(--soft);line-height:1.55;}
 
 /* ── STEPS ── */
 .stps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;}
 .stp{
   text-align:center;padding:28px 16px;
-  background:rgba(13,58,92,.6);
-  border:1px solid rgba(0,217,255,.16);
+  background:#FFFFFF;
+  border:1px solid #E2E8F0;
   border-radius:16px;transition:.3s;
+  box-shadow:0 2px 10px rgba(10,31,68,0.05);
 }
-.stp:hover{border-color:rgba(0,217,255,.38);transform:translateY(-4px);}
+.stp:hover{border-color:rgba(0,212,255,.38);transform:translateY(-4px);}
 .stp-n{
   width:50px;height:50px;border-radius:50%;
   border:2px solid var(--cyan);
   display:grid;place-items:center;
   font-family:"Orbitron",monospace;font-weight:800;font-size:1rem;
-  color:var(--cyan);margin:0 auto 14px;
-  box-shadow:0 0 18px rgba(0,217,255,.2);
+  color:var(--cyan-text);margin:0 auto 14px;
+  box-shadow:0 0 18px rgba(0,212,255,.2);
 }
-.stp h3{font-family:"Orbitron",monospace;font-size:.8rem;color:#fff;margin-bottom:8px;}
+.stp h3{font-family:"Orbitron",monospace;font-size:.8rem;color:#0A1F44;margin-bottom:8px;}
 .stp p{font-size:.79rem;color:var(--soft);line-height:1.6;}
 
 /* ── SECURITY ── */
 .sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:14px;}
 .sc{
-  background:rgba(13,58,92,.55);
-  border:1px solid rgba(0,217,255,.15);
+  background:#FFFFFF;
+  border:1px solid #E2E8F0;
   border-radius:12px;padding:20px;text-align:center;
+  box-shadow:0 2px 10px rgba(10,31,68,0.05);
 }
 .sc-ic{font-size:1.7rem;margin-bottom:10px;}
-.sc h4{font-family:"Orbitron",monospace;font-size:.7rem;color:var(--cyan);margin-bottom:7px;}
+.sc h4{font-family:"Orbitron",monospace;font-size:.7rem;color:var(--cyan-text);margin-bottom:7px;}
 .sc p{font-size:.75rem;color:var(--soft);line-height:1.55;}
 
 /* ── PRICING ── */
 .pg{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;}
 .pc{
-  background:rgba(13,58,92,.6);
-  border:1px solid rgba(0,217,255,.18);
+  background:#FFFFFF;
+  border:1px solid #E2E8F0;
   border-radius:20px;padding:28px 20px;
   text-align:center;transition:.3s;position:relative;overflow:hidden;
+  box-shadow:0 2px 10px rgba(10,31,68,0.05);
 }
 .pc:hover{transform:translateY(-6px);}
 .pc-glow{
@@ -765,30 +774,30 @@ nav{
   filter:blur(32px);opacity:.28;pointer-events:none;
 }
 .pc.c-p{border-color:rgba(157,0,255,.4);background:rgba(60,0,100,.3);}
-.pc.c-c{border-color:rgba(0,217,255,.4);background:rgba(0,80,120,.25);}
-.pc.c-g{border-color:rgba(255,215,0,.3);background:rgba(80,60,0,.2);}
+.pc.c-c{border-color:rgba(0,212,255,.4);background:rgba(0,80,120,.25);}
+.pc.c-g{border-color:rgba(201,138,0,.3);background:rgba(80,60,0,.2);}
 .btag{
   position:absolute;top:-1px;left:50%;transform:translateX(-50%);
   background:linear-gradient(135deg,var(--cyan),var(--electric));
-  color:#001D3D;font-size:.62rem;font-weight:800;
+  color:#0A1F44;font-size:.62rem;font-weight:800;
   padding:4px 16px;border-radius:0 0 10px 10px;
   letter-spacing:2px;white-space:nowrap;
 }
 .pc-ic{font-size:1.9rem;margin-bottom:10px;}
-.pc h3{font-family:"Orbitron",monospace;font-size:.88rem;font-weight:800;color:#fff;margin-bottom:4px;}
+.pc h3{font-family:"Orbitron",monospace;font-size:.88rem;font-weight:800;color:#0A1F44;margin-bottom:4px;}
 .pc-st{font-size:.7rem;color:var(--soft);margin-bottom:16px;}
 .pc-pr{font-family:"Orbitron",monospace;font-size:2.2rem;font-weight:900;margin-bottom:2px;}
 .pc-pd{font-size:.7rem;color:var(--soft);margin-bottom:5px;}
 .pc-or{font-size:.74rem;color:var(--soft);text-decoration:line-through;margin-bottom:4px;}
 .stag{
-  display:inline-block;background:rgba(16,185,129,.18);
-  color:#10B981;font-size:.65rem;font-weight:800;
+  display:inline-block;background:rgba(34,197,94,.15);
+  color:#22C55E;font-size:.65rem;font-weight:800;
   padding:3px 10px;border-radius:10px;letter-spacing:1.5px;margin-bottom:16px;
 }
-.pc-dv{height:1px;background:rgba(0,217,255,.12);margin:14px 0;}
+.pc-dv{height:1px;background:rgba(0,212,255,.12);margin:14px 0;}
 .pc-fl{list-style:none;text-align:left;margin-bottom:22px;}
 .pc-fl li{
-  font-size:.76rem;color:#8ab4c2;
+  font-size:.76rem;color:#4A5568;
   padding:4px 0 4px 18px;position:relative;line-height:1.4;
 }
 .pc-fl li::before{content:"\2713";position:absolute;left:0;color:var(--emerald);font-weight:700;}
@@ -799,45 +808,46 @@ nav{
   text-align:center;
 }
 .bp-gr{background:transparent;color:var(--emerald);border:2px solid var(--emerald);}
-.bp-gr:hover{background:rgba(16,185,129,.15);}
-.bp-cy{background:linear-gradient(135deg,var(--cyan),var(--electric));color:#001D3D;}
-.bp-cy:hover{box-shadow:0 0 22px rgba(0,217,255,.4);}
+.bp-gr:hover{background:rgba(34,197,94,.15);}
+.bp-cy{background:linear-gradient(135deg,var(--cyan),var(--electric));color:#0A1F44;}
+.bp-cy:hover{box-shadow:0 0 22px rgba(0,212,255,.4);}
 .bp-pu{background:linear-gradient(135deg,var(--purple),#7B00CC);color:#fff;}
 .bp-pu:hover{box-shadow:0 0 22px rgba(157,0,255,.4);}
-.bp-go{background:linear-gradient(135deg,var(--gold),#FFA500);color:#001D3D;}
-.bp-go:hover{box-shadow:0 0 22px rgba(255,215,0,.4);}
+.bp-go{background:linear-gradient(135deg,var(--gold),#A66B00);color:#0A1F44;}
+.bp-go:hover{box-shadow:0 0 22px rgba(201,138,0,.4);}
 
 /* ── DOWNLOAD ── */
 .dl-sec{padding:70px 4%;}
 .dl-box{
   max-width:620px;margin:0 auto;
   background:linear-gradient(135deg,rgba(0,80,120,.35),rgba(80,0,130,.15));
-  border:1px solid rgba(0,217,255,.2);
+  border:1px solid rgba(0,212,255,.2);
   border-radius:24px;padding:48px 36px;text-align:center;
 }
 .dl-ic{font-size:3.2rem;margin-bottom:14px;}
 .cbadge{
   display:inline-block;
-  background:rgba(255,215,0,.12);border:1px solid rgba(255,215,0,.3);
+  background:rgba(201,138,0,.12);border:1px solid rgba(201,138,0,.3);
   color:var(--gold);font-size:.7rem;font-weight:800;
   padding:5px 16px;border-radius:20px;letter-spacing:2px;margin-bottom:16px;
 }
-.dl-box h2{font-family:"Orbitron",monospace;font-size:1.4rem;color:#fff;margin-bottom:10px;}
+.dl-box h2{font-family:"Orbitron",monospace;font-size:1.4rem;color:#0A1F44;margin-bottom:10px;}
 .dl-box>p{font-size:.86rem;color:var(--soft);line-height:1.7;margin-bottom:26px;}
 .store-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
 .sbtn{
   display:flex;align-items:center;gap:9px;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.13);
+  background:#FFFFFF;
+  border:1px solid #E2E8F0;
   border-radius:12px;padding:12px 18px;
-  color:#fff;text-decoration:none;transition:.3s;
+  color:#0A1F44;text-decoration:none;transition:.3s;
   min-width:160px;
+  box-shadow:0 2px 8px rgba(10,31,68,0.05);
 }
-.sbtn:hover{background:rgba(0,217,255,.1);border-color:var(--cyan);transform:translateY(-2px);}
+.sbtn:hover{background:#F7FBFF;border-color:var(--cyan);transform:translateY(-2px);}
 .sb-ic{font-size:1.4rem;flex-shrink:0;}
 .sb-tp{font-size:.62rem;color:var(--soft);}
 .sb-nm{font-size:.88rem;font-weight:700;}
-.apk-btn{border-color:rgba(0,217,255,.28);background:rgba(0,217,255,.06);}
+.apk-btn{border-color:rgba(0,212,255,.28);background:rgba(0,212,255,.06);}
 .dl-nt{font-size:.7rem;color:var(--soft);margin-top:18px;opacity:.55;}
 
 /* ── SOCIAL LINKS ── */
@@ -849,16 +859,17 @@ nav{
 .social-links a{
   display:flex;align-items:center;justify-content:center;
   width:50px;height:50px;border-radius:50%;
-  background:rgba(13,58,92,.6);
-  border:1px solid rgba(0,217,255,.2);
+  background:#FFFFFF;
+  border:1px solid #E2E8F0;
   color:var(--cyan);text-decoration:none;
   font-size:1.3rem;transition:.25s;
+  box-shadow:0 2px 8px rgba(10,31,68,0.05);
 }
 .social-links a img{display:block;}
 .social-links a:hover{
   background:linear-gradient(135deg,var(--cyan),var(--electric));
   transform:translateY(-4px);
-  box-shadow:0 6px 20px rgba(0,217,255,.4);
+  box-shadow:0 6px 20px rgba(0,212,255,.4);
 }
 .social-links a:hover img{filter:brightness(0) saturate(100%);}
 
@@ -868,34 +879,34 @@ nav{
 
 /* ── FOOTER ── */
 footer{
-  background:rgba(0,0,0,.35);
-  border-top:1px solid rgba(0,217,255,.12);
+  background:#F8FAFC;
+  border-top:1px solid #E2E8F0;
   padding:48px 4% 26px;
 }
 .fi{max-width:1120px;margin:0 auto;}
 .fg2{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
 .f-logo{
   font-family:"Orbitron",monospace;font-size:.9rem;
-  font-weight:800;color:var(--cyan);
+  font-weight:800;color:var(--navy);
   margin-bottom:12px;display:flex;align-items:center;gap:8px;
 }
 .f-logo img{width:26px;height:26px;}
 .f-desc{font-size:.78rem;color:#3a6a7a;line-height:1.75;}
-.fc2 h4{font-family:"Orbitron",monospace;font-size:.68rem;color:#fff;margin-bottom:14px;letter-spacing:2px;}
+.fc2 h4{font-family:"Orbitron",monospace;font-size:.68rem;color:#0A1F44;margin-bottom:14px;letter-spacing:2px;}
 .fc2 a{display:block;font-size:.78rem;color:#3a6a7a;text-decoration:none;margin-bottom:9px;transition:.2s;}
-.fc2 a:hover{color:var(--cyan);}
+.fc2 a:hover{color:var(--cyan-text);}
 .f-social{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
 .f-social a{
   display:flex;align-items:center;justify-content:center;
   width:34px;height:34px;border-radius:50%;
-  background:rgba(0,217,255,.06);
-  border:1px solid rgba(0,217,255,.15);
+  background:rgba(0,212,255,.06);
+  border:1px solid rgba(0,212,255,.15);
   color:var(--cyan);text-decoration:none;font-size:.9rem;transition:.2s;
 }
 .f-social a img{display:block;}
-.f-social a:hover{background:rgba(0,217,255,.18);border-color:rgba(0,217,255,.4);}
+.f-social a:hover{background:rgba(0,212,255,.18);border-color:rgba(0,212,255,.4);}
 .fb{
-  border-top:1px solid rgba(0,217,255,.1);
+  border-top:1px solid rgba(0,212,255,.1);
   padding-top:20px;display:flex;
   justify-content:space-between;align-items:center;
   flex-wrap:wrap;gap:10px;
@@ -904,8 +915,8 @@ footer{
 .eb{display:flex;gap:8px;flex-wrap:wrap;}
 .eb span{
   font-size:.66rem;color:#2a5a4a;
-  background:rgba(0,217,255,.04);
-  border:1px solid rgba(0,217,255,.1);
+  background:rgba(0,212,255,.04);
+  border:1px solid rgba(0,212,255,.1);
   padding:3px 9px;border-radius:6px;
 }
 
@@ -916,7 +927,7 @@ footer{
   .mobile-menu.open{display:flex;}
   .fg2{grid-template-columns:1fr 1fr;}
   .fg2>div:first-child{grid-column:1/-1;}
-  .stat{padding:10px 16px;border-right:none;border-bottom:1px solid rgba(0,217,255,.1);}
+  .stat{padding:10px 16px;border-right:none;border-bottom:1px solid rgba(0,212,255,.1);}
   .stat:last-child{border-bottom:none;}
   .stats-inner{flex-direction:column;}
   .dl-box{padding:32px 18px;}
@@ -940,8 +951,8 @@ footer{
     <div class="nav-logo">
       <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-label="Digital Will Locker Logo">
         <rect width="512" height="512" fill="#001229"/>
-        <path d="M155.62,112.64 A175,175 0 0 1 407.55,343.5" fill="none" stroke="#00D9FF" stroke-width="70"/>
-        <path d="M356.38,399.36 A175,175 0 0 1 104.45,168.5" fill="none" stroke="#00D9FF" stroke-width="70"/>
+        <path d="M155.62,112.64 A175,175 0 0 1 407.55,343.5" fill="none" stroke="#00D4FF" stroke-width="70"/>
+        <path d="M356.38,399.36 A175,175 0 0 1 104.45,168.5" fill="none" stroke="#00D4FF" stroke-width="70"/>
         <path d="M256,175 L316,230 L288,300 L256,345 L224,300 L196,230 Z" fill="#FFFFFF"/>
         <line x1="256" y1="195" x2="256" y2="290" stroke="#001229" stroke-width="8"/>
         <circle cx="256" cy="295" r="8" fill="#001229"/>
@@ -1159,14 +1170,14 @@ footer{
     <div class="stitle">Military-Grade Security<br>For Your Digital Life</div>
     <div class="ssub">Every feature built around one principle: your data never leaves your device</div>
     <div class="fg">
-      <div class="fc" style="--fc-c:var(--cyan)"><div class="fci" style="background:rgba(0,217,255,.1)">&#128274;</div><h3>Protected Vault</h3><p>256-bit AES encryption active at all times. Zero-knowledge &#8212; even we cannot access your data.</p></div>
+      <div class="fc" style="--fc-c:var(--cyan)"><div class="fci" style="background:rgba(0,212,255,.1)">&#128274;</div><h3>Protected Vault</h3><p>256-bit AES encryption active at all times. Zero-knowledge &#8212; even we cannot access your data.</p></div>
       <div class="fc" style="--fc-c:var(--purple)"><div class="fci" style="background:rgba(157,0,255,.1)">&#9201;</div><h3>Dead Man's Switch</h3><p>Miss a check-in and it automatically notifies all emergency contacts securely.</p></div>
-      <div class="fc" style="--fc-c:var(--emerald)"><div class="fci" style="background:rgba(16,185,129,.1)">&#128070;</div><h3>Biometric Auth</h3><p>Fingerprint and Face ID. Handled by your device secure enclave &#8212; we never see your biometrics.</p></div>
-      <div class="fc" style="--fc-c:var(--cyan)"><div class="fci" style="background:rgba(0,217,255,.1)">&#128196;</div><h3>Document Organizer AI</h3><p>AI-powered categorization for PDFs and images. Auto-sorts wills, IDs, and contracts.</p></div>
-      <div class="fc" style="--fc-c:var(--gold)"><div class="fci" style="background:rgba(255,215,0,.1)">&#129302;</div><h3>AI Emergency Assistant</h3><p>Guides loved ones step-by-step through accessing your vault and managing your estate.</p></div>
+      <div class="fc" style="--fc-c:var(--emerald)"><div class="fci" style="background:rgba(34,197,94,.1)">&#128070;</div><h3>Biometric Auth</h3><p>Fingerprint and Face ID. Handled by your device secure enclave &#8212; we never see your biometrics.</p></div>
+      <div class="fc" style="--fc-c:var(--cyan)"><div class="fci" style="background:rgba(0,212,255,.1)">&#128196;</div><h3>Document Organizer AI</h3><p>AI-powered categorization for PDFs and images. Auto-sorts wills, IDs, and contracts.</p></div>
+      <div class="fc" style="--fc-c:var(--gold)"><div class="fci" style="background:rgba(201,138,0,.1)">&#129302;</div><h3>AI Emergency Assistant</h3><p>Guides loved ones step-by-step through accessing your vault and managing your estate.</p></div>
       <div class="fc" style="--fc-c:var(--purple)"><div class="fci" style="background:rgba(157,0,255,.1)">&#128273;</div><h3>12-Word Recovery</h3><p>Military-style BIP39 recovery phrase. Forget password? Your 12 words restore everything.</p></div>
-      <div class="fc" style="--fc-c:var(--emerald)"><div class="fci" style="background:rgba(16,185,129,.1)">&#128179;</div><h3>Encrypted Cards</h3><p>Store bank accounts and credit cards with zero cloud exposure. Locally only.</p></div>
-      <div class="fc" style="--fc-c:var(--cyan)"><div class="fci" style="background:rgba(0,217,255,.1)">&#128737;</div><h3>Login Protection</h3><p>5 failed attempts locks account for 5 minutes. Brute-force attacks impossible.</p></div>
+      <div class="fc" style="--fc-c:var(--emerald)"><div class="fci" style="background:rgba(34,197,94,.1)">&#128179;</div><h3>Encrypted Cards</h3><p>Store bank accounts and credit cards with zero cloud exposure. Locally only.</p></div>
+      <div class="fc" style="--fc-c:var(--cyan)"><div class="fci" style="background:rgba(0,212,255,.1)">&#128737;</div><h3>Login Protection</h3><p>5 failed attempts locks account for 5 minutes. Brute-force attacks impossible.</p></div>
     </div>
   </div>
 </div>
@@ -1268,7 +1279,7 @@ footer{
         <div class="pc-glow" style="background:var(--cyan)"></div>
         <div class="pc-ic">&#128241;</div><h3>Weekly Starter</h3>
         <div class="pc-st">1 GB &#183; 3 Contacts</div>
-        <div class="pc-pr" style="color:var(--cyan)">$2.99</div>
+        <div class="pc-pr" style="color:var(--cyan-text)">$2.99</div>
         <div class="pc-pd">per week</div>
         <div class="pc-dv"></div>
         <ul class="pc-fl">
@@ -1398,31 +1409,31 @@ footer{
   <div class="stitle" style="margin-bottom:24px;">Stay Connected</div>
   <div class="social-links">
     <a href="https://web.facebook.com/profile.php?id=61593185456895" target="_blank" rel="noopener" title="Facebook">
-      <img src="https://api.iconify.design/simple-icons:facebook.svg?color=%2300D9FF" alt="Facebook" width="24" height="24">
+      <img src="https://api.iconify.design/simple-icons:facebook.svg?color=%2300D4FF" alt="Facebook" width="24" height="24">
     </a>
     <a href="https://www.youtube.com/@DigitalWillLocker" target="_blank" rel="noopener" title="YouTube">
-      <img src="https://api.iconify.design/simple-icons:youtube.svg?color=%2300D9FF" alt="YouTube" width="24" height="24">
+      <img src="https://api.iconify.design/simple-icons:youtube.svg?color=%2300D4FF" alt="YouTube" width="24" height="24">
     </a>
     <a href="https://x.com/DigitalWillLock" target="_blank" rel="noopener" title="X (Twitter)">
-      <img src="https://api.iconify.design/simple-icons:x.svg?color=%2300D9FF" alt="X (Twitter)" width="24" height="24">
+      <img src="https://api.iconify.design/simple-icons:x.svg?color=%2300D4FF" alt="X (Twitter)" width="24" height="24">
     </a>
     <a href="https://www.tiktok.com/@willlocker" target="_blank" rel="noopener" title="TikTok">
-      <img src="https://api.iconify.design/simple-icons:tiktok.svg?color=%2300D9FF" alt="TikTok" width="24" height="24">
+      <img src="https://api.iconify.design/simple-icons:tiktok.svg?color=%2300D4FF" alt="TikTok" width="24" height="24">
     </a>
     <a href="https://www.instagram.com/digitalwilllocker/" target="_blank" rel="noopener" title="Instagram">
-      <img src="https://api.iconify.design/simple-icons:instagram.svg?color=%2300D9FF" alt="Instagram" width="24" height="24">
+      <img src="https://api.iconify.design/simple-icons:instagram.svg?color=%2300D4FF" alt="Instagram" width="24" height="24">
     </a>
     <a href="https://t.me/Digitalwilllocker" target="_blank" rel="noopener" title="Telegram">
-      <img src="https://api.iconify.design/simple-icons:telegram.svg?color=%2300D9FF" alt="Telegram" width="24" height="24">
+      <img src="https://api.iconify.design/simple-icons:telegram.svg?color=%2300D4FF" alt="Telegram" width="24" height="24">
     </a>
     <a href="https://www.pinterest.com/digitalwilllocker/_profile/" target="_blank" rel="noopener" title="Pinterest">
-      <img src="https://api.iconify.design/simple-icons:pinterest.svg?color=%2300D9FF" alt="Pinterest" width="24" height="24">
+      <img src="https://api.iconify.design/simple-icons:pinterest.svg?color=%2300D4FF" alt="Pinterest" width="24" height="24">
     </a>
     <a href="https://www.linkedin.com/in/digital-will-locker-181a14416/" target="_blank" rel="noopener" title="LinkedIn">
-      <img src="https://api.iconify.design/simple-icons:linkedin.svg?color=%2300D9FF" alt="LinkedIn" width="24" height="24">
+      <img src="https://api.iconify.design/simple-icons:linkedin.svg?color=%2300D4FF" alt="LinkedIn" width="24" height="24">
     </a>
     <a href="https://whatsapp.com/channel/0029Vb8UvvP1CYoUVgQOUj2T" target="_blank" rel="noopener" title="WhatsApp Channel">
-      <img src="https://api.iconify.design/simple-icons:whatsapp.svg?color=%2300D9FF" alt="WhatsApp Channel" width="24" height="24">
+      <img src="https://api.iconify.design/simple-icons:whatsapp.svg?color=%2300D4FF" alt="WhatsApp Channel" width="24" height="24">
     </a>
   </div>
 </div>
@@ -1452,7 +1463,7 @@ footer{
     <div class="stitle">About Digital Will Locker</div>
     <div class="about-card">
       <p>Digital Will Locker is created by an independent developer to help people securely store their important personal documents.</p>
-      <p>We focus on <strong style="color:var(--cyan)">privacy, simplicity, and security</strong> for users worldwide. Unlike big tech companies, we believe your personal documents and digital will should never be stored on someone else's server. Your data belongs to you — and only you.</p>
+      <p>We focus on <strong style="color:var(--cyan-text)">privacy, simplicity, and security</strong> for users worldwide. Unlike big tech companies, we believe your personal documents and digital will should never be stored on someone else's server. Your data belongs to you — and only you.</p>
       <p>Every feature in Digital Will Locker is built with one goal in mind: give every person, regardless of technical background, a safe and simple way to protect what matters most — for themselves and for their loved ones.</p>
       <p>We are a small, independent team with big values. No investors, no ads, no data selling — just a product built with care.</p>
       <br>
@@ -1468,8 +1479,8 @@ footer{
         <div class="f-logo">
           <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-label="Digital Will Locker Logo">
             <rect width="512" height="512" fill="#001229"/>
-            <path d="M155.62,112.64 A175,175 0 0 1 407.55,343.5" fill="none" stroke="#00D9FF" stroke-width="70"/>
-            <path d="M356.38,399.36 A175,175 0 0 1 104.45,168.5" fill="none" stroke="#00D9FF" stroke-width="70"/>
+            <path d="M155.62,112.64 A175,175 0 0 1 407.55,343.5" fill="none" stroke="#00D4FF" stroke-width="70"/>
+            <path d="M356.38,399.36 A175,175 0 0 1 104.45,168.5" fill="none" stroke="#00D4FF" stroke-width="70"/>
             <path d="M256,175 L316,230 L288,300 L256,345 L224,300 L196,230 Z" fill="#FFFFFF"/>
             <line x1="256" y1="195" x2="256" y2="290" stroke="#001229" stroke-width="8"/>
             <circle cx="256" cy="295" r="8" fill="#001229"/>
@@ -1480,31 +1491,31 @@ footer{
         <p class="f-desc">AES-256 encrypted offline security vault. AES-256 encrypted, 100% offline, zero cloud storage. Your data never leaves your device.</p>
         <div class="f-social">
           <a href="https://web.facebook.com/profile.php?id=61593185456895" target="_blank" rel="noopener" title="Facebook">
-      <img src="https://api.iconify.design/simple-icons:facebook.svg?color=%2300D9FF" alt="Facebook" width="24" height="24">
+      <img src="https://api.iconify.design/simple-icons:facebook.svg?color=%2300D4FF" alt="Facebook" width="24" height="24">
     </a>
           <a href="https://www.youtube.com/@DigitalWillLocker" target="_blank" rel="noopener" title="YouTube">
-            <img src="https://cdn.simpleicons.org/youtube/00D9FF" alt="YouTube" width="18" height="18">
+            <img src="https://cdn.simpleicons.org/youtube/00D4FF" alt="YouTube" width="18" height="18">
           </a>
           <a href="https://x.com/DigitalWillLock" target="_blank" rel="noopener" title="X (Twitter)">
-      <img src="https://api.iconify.design/simple-icons:x.svg?color=%2300D9FF" alt="X (Twitter)" width="24" height="24">
+      <img src="https://api.iconify.design/simple-icons:x.svg?color=%2300D4FF" alt="X (Twitter)" width="24" height="24">
     </a>
           <a href="https://www.tiktok.com/@willlocker" target="_blank" rel="noopener" title="TikTok">
-            <img src="https://cdn.simpleicons.org/tiktok/00D9FF" alt="TikTok" width="18" height="18">
+            <img src="https://cdn.simpleicons.org/tiktok/00D4FF" alt="TikTok" width="18" height="18">
           </a>
           <a href="https://www.instagram.com/digitalwilllocker/" target="_blank" rel="noopener" title="Instagram">
-            <img src="https://cdn.simpleicons.org/instagram/00D9FF" alt="Instagram" width="18" height="18">
+            <img src="https://cdn.simpleicons.org/instagram/00D4FF" alt="Instagram" width="18" height="18">
           </a>
           <a href="https://t.me/Digitalwilllocker" target="_blank" rel="noopener" title="Telegram">
-            <img src="https://cdn.simpleicons.org/telegram/00D9FF" alt="Telegram" width="18" height="18">
+            <img src="https://cdn.simpleicons.org/telegram/00D4FF" alt="Telegram" width="18" height="18">
           </a>
           <a href="https://www.pinterest.com/digitalwilllocker/_profile/" target="_blank" rel="noopener" title="Pinterest">
-            <img src="https://cdn.simpleicons.org/pinterest/00D9FF" alt="Pinterest" width="18" height="18">
+            <img src="https://cdn.simpleicons.org/pinterest/00D4FF" alt="Pinterest" width="18" height="18">
           </a>
           <a href="https://www.linkedin.com/in/digital-will-locker-181a14416/" target="_blank" rel="noopener" title="LinkedIn">
-      <img src="https://api.iconify.design/simple-icons:linkedin.svg?color=%2300D9FF" alt="LinkedIn" width="24" height="24">
+      <img src="https://api.iconify.design/simple-icons:linkedin.svg?color=%2300D4FF" alt="LinkedIn" width="24" height="24">
     </a>
           <a href="https://whatsapp.com/channel/0029Vb8UvvP1CYoUVgQOUj2T" target="_blank" rel="noopener" title="WhatsApp">
-            <img src="https://cdn.simpleicons.org/whatsapp/00D9FF" alt="WhatsApp" width="18" height="18">
+            <img src="https://cdn.simpleicons.org/whatsapp/00D4FF" alt="WhatsApp" width="18" height="18">
           </a>
         </div>
       </div>
@@ -1697,46 +1708,46 @@ document.querySelectorAll("a[href^='#']").forEach(function(a){
 #dwl-chat-btn{
   position:fixed;bottom:28px;left:24px;z-index:9998;
   width:56px;height:56px;border-radius:50%;
-  background:linear-gradient(135deg,#00D9FF,#00FFFF);
-  color:#001D3D;font-size:1.5rem;
+  background:linear-gradient(135deg,#00D4FF,#00FFFF);
+  color:#0A1F44;font-size:1.5rem;
   display:flex;align-items:center;justify-content:center;
   cursor:pointer;border:none;
-  box-shadow:0 4px 20px rgba(0,217,255,0.5);
+  box-shadow:0 4px 20px rgba(0,212,255,0.5);
   transition:.3s;
 }
-#dwl-chat-btn:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(0,217,255,0.7);}
+#dwl-chat-btn:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(0,212,255,0.7);}
 #dwl-chat-box{
   position:fixed;bottom:96px;left:24px;z-index:9998;
   width:320px;max-width:calc(100vw - 48px);
-  background:#07111f;
-  border:1px solid rgba(0,217,255,0.3);
+  background:#FFFFFF;
+  border:1px solid #E2E8F0;
   border-radius:18px;
   overflow:hidden;
-  box-shadow:0 8px 40px rgba(0,0,0,0.6);
+  box-shadow:0 8px 40px rgba(10,31,68,0.18);
   display:none;flex-direction:column;
   max-height:440px;
 }
 #dwl-chat-box.open{display:flex;}
 .dwl-chat-head{
-  background:linear-gradient(135deg,rgba(0,217,255,0.15),rgba(0,100,180,0.2));
-  border-bottom:1px solid rgba(0,217,255,0.2);
+  background:linear-gradient(135deg,rgba(0,212,255,0.15),rgba(0,100,180,0.2));
+  border-bottom:1px solid rgba(0,212,255,0.2);
   padding:12px 16px;
   display:flex;align-items:center;justify-content:space-between;
 }
 .dwl-chat-head-left{display:flex;align-items:center;gap:10px;}
 .dwl-chat-avatar{
   width:34px;height:34px;border-radius:50%;
-  background:linear-gradient(135deg,#00D9FF,#00FFFF);
+  background:linear-gradient(135deg,#00D4FF,#00FFFF);
   display:flex;align-items:center;justify-content:center;
-  font-size:.95rem;color:#001D3D;font-weight:800;flex-shrink:0;
+  font-size:.95rem;color:#0A1F44;font-weight:800;flex-shrink:0;
 }
-.dwl-chat-name{font-size:.82rem;font-weight:700;color:#fff;font-family:"Orbitron",monospace;}
-.dwl-chat-status{font-size:.65rem;color:#00D9FF;}
+.dwl-chat-name{font-size:.82rem;font-weight:700;color:#0A1F44;font-family:"Orbitron",monospace;}
+.dwl-chat-status{font-size:.65rem;color:#0088B3;}
 .dwl-chat-close{
-  background:none;border:none;color:rgba(255,255,255,0.5);
+  background:none;border:none;color:rgba(10,31,68,0.45);
   font-size:1.1rem;cursor:pointer;padding:4px;
 }
-.dwl-chat-close:hover{color:#fff;}
+.dwl-chat-close:hover{color:#0A1F44;}
 .dwl-chat-msgs{
   flex:1;overflow-y:auto;padding:14px;
   display:flex;flex-direction:column;gap:10px;
@@ -1744,20 +1755,20 @@ document.querySelectorAll("a[href^='#']").forEach(function(a){
 }
 .dwl-chat-msgs::-webkit-scrollbar{width:4px;}
 .dwl-chat-msgs::-webkit-scrollbar-track{background:transparent;}
-.dwl-chat-msgs::-webkit-scrollbar-thumb{background:rgba(0,217,255,0.3);border-radius:4px;}
+.dwl-chat-msgs::-webkit-scrollbar-thumb{background:rgba(0,212,255,0.3);border-radius:4px;}
 .dwl-msg{
   max-width:85%;padding:9px 13px;
   border-radius:14px;font-size:.8rem;line-height:1.5;
 }
 .dwl-msg.bot{
-  background:rgba(0,217,255,0.1);
-  border:1px solid rgba(0,217,255,0.2);
-  color:#cce8f0;align-self:flex-start;
+  background:#EAF8FF;
+  border:1px solid rgba(0,212,255,0.25);
+  color:#0A1F44;align-self:flex-start;
   border-radius:4px 14px 14px 14px;
 }
 .dwl-msg.user{
-  background:linear-gradient(135deg,rgba(0,217,255,0.2),rgba(0,100,180,0.3));
-  color:#fff;align-self:flex-end;
+  background:linear-gradient(135deg,#DFF7FF,#CDEFFF);
+  color:#0A1F44;align-self:flex-end;
   border-radius:14px 14px 4px 14px;
 }
 .dwl-quick-btns{
@@ -1765,30 +1776,30 @@ document.querySelectorAll("a[href^='#']").forEach(function(a){
   display:flex;flex-wrap:wrap;gap:6px;
 }
 .dwl-qbtn{
-  background:rgba(0,217,255,0.08);
-  border:1px solid rgba(0,217,255,0.25);
+  background:rgba(0,212,255,0.08);
+  border:1px solid rgba(0,212,255,0.25);
   border-radius:16px;padding:5px 11px;
-  font-size:.7rem;color:#00D9FF;
+  font-size:.7rem;color:#0088B3;
   cursor:pointer;transition:.2s;white-space:nowrap;
 }
-.dwl-qbtn:hover{background:rgba(0,217,255,0.18);}
+.dwl-qbtn:hover{background:rgba(0,212,255,0.18);}
 .dwl-chat-input-row{
   display:flex;gap:8px;padding:10px 14px;
-  border-top:1px solid rgba(0,217,255,0.1);
+  border-top:1px solid rgba(0,212,255,0.1);
 }
 .dwl-chat-input{
-  flex:1;background:rgba(255,255,255,0.06);
-  border:1px solid rgba(0,217,255,0.2);
+  flex:1;background:#FFFFFF;
+  border:1px solid #D8E1EC;
   border-radius:20px;padding:8px 14px;
-  color:#fff;font-size:.8rem;outline:none;
+  color:#0A1F44;font-size:.8rem;outline:none;
   font-family:"Exo 2",sans-serif;
 }
-.dwl-chat-input::placeholder{color:rgba(255,255,255,0.35);}
-.dwl-chat-input:focus{border-color:rgba(0,217,255,0.5);}
+.dwl-chat-input::placeholder{color:#94A3B8;}
+.dwl-chat-input:focus{border-color:rgba(0,212,255,0.5);}
 .dwl-chat-send{
   width:36px;height:36px;border-radius:50%;
-  background:linear-gradient(135deg,#00D9FF,#00FFFF);
-  border:none;color:#001D3D;font-size:1rem;
+  background:linear-gradient(135deg,#00D4FF,#00FFFF);
+  border:none;color:#0A1F44;font-size:1rem;
   cursor:pointer;display:flex;align-items:center;justify-content:center;
   flex-shrink:0;transition:.2s;
 }
@@ -1864,7 +1875,7 @@ function dwlGetAnswer(q){
 
   // Download APK
   if(q.match(/download|apk|install|get app|how to get/)){
-    return '⬇️ You can download the APK directly here:<br><br><a href="https://github.com/Kalaya123/kalaya123-digitalwilllocker-apk/releases/download/v1.1.0/digitalwilllocker.apk" style="color:#00D9FF;font-weight:700;" download>📱 Download APK v1.1.0</a><br><br>Also available on <strong>APKPure</strong>, <strong>OPPO App Market</strong>, and <strong>Indus App Store</strong>.';
+    return '⬇️ You can download the APK directly here:<br><br><a href="https://github.com/Kalaya123/kalaya123-digitalwilllocker-apk/releases/download/v1.1.0/digitalwilllocker.apk" style="color:#0088B3;font-weight:700;" download>📱 Download APK v1.1.0</a><br><br>Also available on <strong>APKPure</strong>, <strong>OPPO App Market</strong>, and <strong>Indus App Store</strong>.';
   }
 
   // Free plan
@@ -1874,7 +1885,7 @@ function dwlGetAnswer(q){
 
   // Pricing
   if(q.match(/pric|plan|cost|how much|weekly|monthly|yearly|subscription/)){
-    return '💰 <strong>Plans & Pricing:</strong><br><br>🆓 <strong>Free</strong> — 20MB, 1 contact<br>📅 <strong>Weekly</strong> — $2.99/week, 1GB, 3 contacts<br>📆 <strong>Monthly</strong> — $4.99/month, 5GB, 5 contacts<br>🏆 <strong>Yearly</strong> — $19.99/year, 20GB, unlimited contacts<br><br>👉 <a href="#pricing" style="color:#00D9FF;">See full plan details</a>';
+    return '💰 <strong>Plans & Pricing:</strong><br><br>🆓 <strong>Free</strong> — 20MB, 1 contact<br>📅 <strong>Weekly</strong> — $2.99/week, 1GB, 3 contacts<br>📆 <strong>Monthly</strong> — $4.99/month, 5GB, 5 contacts<br>🏆 <strong>Yearly</strong> — $19.99/year, 20GB, unlimited contacts<br><br>👉 <a href="#pricing" style="color:#0088B3;">See full plan details</a>';
   }
 
   // Security
@@ -1884,7 +1895,7 @@ function dwlGetAnswer(q){
 
   // Support / contact
   if(q.match(/support|contact|help|email|problem|issue/)){
-    return '📧 <strong>Contact our support team:</strong><br><br>Email: <a href="mailto:support@digitalwilllocker.com" style="color:#00D9FF;">support@digitalwilllocker.com</a><br><br>We reply within 24 hours! You can also visit our <a href="support.html" style="color:#00D9FF;">Help Center</a>.';
+    return '📧 <strong>Contact our support team:</strong><br><br>Email: <a href="mailto:support@digitalwilllocker.com" style="color:#0088B3;">support@digitalwilllocker.com</a><br><br>We reply within 24 hours! You can also visit our <a href="support.html" style="color:#0088B3;">Help Center</a>.';
   }
 
   // What is the app
@@ -1899,7 +1910,7 @@ function dwlGetAnswer(q){
 
   // Stores
   if(q.match(/store|play store|galaxy|huawei|amazon|apkpure|where to find/)){
-    return '📱 <strong>Available on:</strong><br><br>✔ <a href="https://apkpure.com/digital-will-locker/com.swagon.digitalwilllocker" style="color:#00D9FF;" target="_blank">APKPure</a><br>✔ OPPO App Market<br>✔ <a href="https://www.indusappstore.com/apps/productivity/digital-will-locker/com.swagon.digitalwilllocker/?page=details&id=com.swagon.digitalwilllocker" style="color:#00D9FF;" target="_blank">Indus App Store</a><br>✔ Direct APK download (GitHub)';
+    return '📱 <strong>Available on:</strong><br><br>✔ <a href="https://apkpure.com/digital-will-locker/com.swagon.digitalwilllocker" style="color:#0088B3;" target="_blank">APKPure</a><br>✔ OPPO App Market<br>✔ <a href="https://www.indusappstore.com/apps/productivity/digital-will-locker/com.swagon.digitalwilllocker/?page=details&id=com.swagon.digitalwilllocker" style="color:#0088B3;" target="_blank">Indus App Store</a><br>✔ Direct APK download (GitHub)';
   }
 
   // Version
@@ -1909,11 +1920,11 @@ function dwlGetAnswer(q){
 
 // Review / Feedback
   if(q.match(/review|feedback|rate|rating|testimonial|experience|opinion/)){
-    return '⭐ <strong>We\'d love your feedback!</strong><br><br>Share your experience with Digital Will Locker — takes less than 1 minute:<br><br><a href="https://docs.google.com/forms/d/e/1FAIpQLSd6fJ-xG9iuex5IX38ow0FjjDYkG5FYzDHcrdOssM5w9UjPlA/viewform" style="color:#00D9FF;font-weight:700;" target="_blank">📝 Leave a Review</a><br><br>Thank you for supporting the app! 🙏';
+    return '⭐ <strong>We\'d love your feedback!</strong><br><br>Share your experience with Digital Will Locker — takes less than 1 minute:<br><br><a href="https://docs.google.com/forms/d/e/1FAIpQLSd6fJ-xG9iuex5IX38ow0FjjDYkG5FYzDHcrdOssM5w9UjPlA/viewform" style="color:#0088B3;font-weight:700;" target="_blank">📝 Leave a Review</a><br><br>Thank you for supporting the app! 🙏';
   }
   
   // Default
-  return '🤔 I\'m not sure about that. Please contact our support team:<br><br>📧 <a href="mailto:support@digitalwilllocker.com" style="color:#00D9FF;">support@digitalwilllocker.com</a><br><br>Or ask me about: <strong>Download, Pricing, Security, Features, Support, or Reviews</strong>! 😊';
+  return '🤔 I\'m not sure about that. Please contact our support team:<br><br>📧 <a href="mailto:support@digitalwilllocker.com" style="color:#0088B3;">support@digitalwilllocker.com</a><br><br>Or ask me about: <strong>Download, Pricing, Security, Features, Support, or Reviews</strong>! 😊';
 }
 </script>
 </body>
