@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Whitepaper – Digital Will Locker</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--cyan:#00D4FF;--cyan-text:#0088B3;--electric:#33DFFF;--emerald:#22C55E;--gold:#C98A00;--navy:#0A1F44;--border:#E2E8F0;--card:#FFFFFF;--soft:#4A5568;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#FFFFFF;color:#4A5568;font-family:'Exo 2',sans-serif;min-height:100vh;}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,212,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.035) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:14px 5%;box-shadow:0 1px 8px rgba(10,31,68,0.05);}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;max-width:1000px;margin:0 auto;}
+.logo{font-family:'Orbitron',monospace;font-size:.9rem;font-weight:800;color:var(--navy);display:flex;align-items:center;gap:8px;}
+.logo img{width:28px;height:28px;}
+.back{color:var(--navy);text-decoration:none;font-size:.85rem;padding:7px 14px;border:1px solid rgba(0,212,255,.4);border-radius:8px;transition:.2s;}
+.back:hover{background:rgba(0,212,255,.1);}
+.container{max-width:820px;margin:0 auto;padding:110px 5% 80px;position:relative;z-index:1;}
+.page-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--cyan),var(--electric));border:none;border-radius:30px;padding:7px 18px;font-size:.75rem;color:var(--navy);letter-spacing:1.5px;font-weight:700;margin-bottom:24px;box-shadow:0 4px 14px rgba(0,212,255,.35);}
+.page-title{font-family:'Orbitron',monospace;font-size:2rem;font-weight:800;color:var(--navy);margin-bottom:8px;}
+.updated{font-size:.8rem;color:var(--soft);margin-bottom:40px;}
+.highlight-box{background:#E8FBF0;border:1px solid rgba(34,197,94,.4);border-radius:14px;padding:22px 26px;margin-bottom:36px;}
+.highlight-box h3{font-family:'Orbitron',monospace;font-size:.88rem;color:#15803D;margin-bottom:10px;}
+.highlight-box p{font-size:.86rem;color:var(--soft);line-height:1.75;margin-bottom:0;}
+h2{font-family:'Orbitron',monospace;font-size:1rem;color:var(--cyan-text);margin:36px 0 14px;letter-spacing:.5px;}
+h3.sub{font-family:'Orbitron',monospace;font-size:.82rem;color:var(--navy);margin:22px 0 10px;}
+p{font-size:.88rem;color:var(--soft);line-height:1.8;margin-bottom:14px;}
+ul{margin:10px 0 14px 0;padding-left:0;list-style:none;}
+ul li{font-size:.86rem;color:var(--soft);line-height:1.7;padding:4px 0 4px 18px;position:relative;}
+ul li::before{content:"•";position:absolute;left:0;color:var(--cyan-text);}
+.spec-table{width:100%;border-collapse:collapse;margin:20px 0;}
+.spec-table th{background:#EAF8FF;color:var(--navy);font-family:'Orbitron',monospace;font-size:.72rem;padding:12px 14px;text-align:left;border:1px solid var(--border);}
+.spec-table td{padding:11px 14px;font-size:.84rem;color:var(--soft);border:1px solid var(--border);}
+.spec-table tr:nth-child(even) td{background:#F7FBFF;}
+.spec-table td:first-child{color:var(--navy);font-weight:600;}
+.contact-box{background:#F7FBFF;border:1px solid var(--border);border-radius:14px;padding:24px;margin-top:36px;}
+.contact-box h3{font-family:'Orbitron',monospace;font-size:.88rem;color:var(--navy);margin-bottom:12px;}
+.contact-box a{color:var(--cyan-text);text-decoration:none;}
+.contact-box a:hover{text-decoration:underline;}
+footer{background:#F8FAFC;border-top:1px solid var(--border);padding:28px 5%;text-align:center;position:relative;z-index:1;}
+footer p{font-size:.76rem;color:#4A5568;}
+footer a{color:var(--cyan-text);}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <div class="logo"><img src="logo.png" alt="Logo">DIGITAL WILL LOCKER</div>
+    <a href="index.html" class="back">&#8592; Home</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="page-badge">&#128737; SECURITY WHITEPAPER</div>
+  <div class="page-title">Security Whitepaper</div>
+  <p class="updated">Last updated: November 2026</p>
+
+  <div class="highlight-box">
+    <h3>&#9989; The Short Version</h3>
+    <p>Your will, documents, passwords and payment card details are stored on your device and encrypted with AES-256. We do not receive your vault in normal use, and there is no cloud server holding a copy of it. A few features use the internet (account sign-in, emergency alerts and sharing, AI tools and payments). This page lists exactly which, and what they send.</p>
+  </div>
+
+  <h2>1. Why Keeping Your Vault On Your Device Matters</h2>
+  <p>Most password and document vault apps rely on cloud servers — meaning your sensitive data is encrypted, sent over the internet, and stored on someone else's infrastructure. That creates a target: if the provider's servers are ever breached, misconfigured, or subpoenaed, your data is exposed along with everyone else's.</p>
+  <p>Digital Will Locker takes a different approach. Your vault is created, encrypted, and stored on your own device. In normal use there is no upload step, and there is no server-side database of user vaults. An attacker cannot breach a server that doesn't hold your vault.</p>
+
+  <h2>2. Encryption Architecture</h2>
+  <h3 class="sub">AES-256 Encryption</h3>
+  <p>Your vault data — notes, payment card details, emergency contact information and document details — is stored in an AES-256 encrypted database, and the document files you add are encrypted with AES-256 as well. AES-256 is the encryption standard approved by the US National Institute of Standards and Technology (NIST) and widely used to protect classified and financial information worldwide. The encryption key is created on your device and protected by your device's secure hardware.</p>
+  <p>Legacy Message recordings are stored as files on your device and are not encrypted by the app.</p>
+
+  <h3 class="sub">PBKDF2 Password Hashing</h3>
+  <p>Your master password is never stored in plain text. It is processed through PBKDF2 with 10,000 iterations, a deliberately slow hashing method designed to make password guessing expensive for an attacker, even if they somehow obtained the hashed value.</p>
+
+  <h3 class="sub">Biometric Authentication</h3>
+  <p>Fingerprint and face unlock are handled entirely by your device's secure hardware (the same secure chip your phone uses for banking apps). Digital Will Locker never receives or stores raw biometric data — your device confirms your identity locally and only then unlocks the vault.</p>
+
+  <table class="spec-table">
+    <tr><th>Component</th><th>Method</th></tr>
+    <tr><td>Vault data and document encryption</td><td>AES-256</td></tr>
+    <tr><td>Password protection</td><td>PBKDF2, 10,000 iterations</td></tr>
+    <tr><td>Biometric login</td><td>Device secure hardware (on-device only)</td></tr>
+    <tr><td>Data storage location</td><td>On your device (internet features are listed in Section 4)</td></tr>
+    <tr><td>Recovery method</td><td>12-word recovery phrase, user-held only</td></tr>
+  </table>
+
+  <h2>3. What We Do Not Have Access To</h2>
+  <p>Because of this design, the following are not available to us:</p>
+  <ul>
+    <li>Your vault contents, documents, or wills, in normal use</li>
+    <li>Your password in readable form</li>
+    <li>Your 12-word recovery phrase</li>
+    <li>Your biometric data</li>
+    <li>Your payment card details stored in the app</li>
+  </ul>
+  <p>If your device is lost, the app is reinstalled, or its data is cleared, and you have not kept your own copy of your documents or recorded your recovery phrase, we cannot recover your vault for you. This is a deliberate trade-off: the same design that prevents us from accessing your vault also means we cannot bypass that protection on your behalf, even if you ask us to.</p>
+
+  <h2>4. Features That Use The Internet</h2>
+  <p>The following features send information over HTTPS to our service providers. Nothing is sent unless you use the feature.</p>
+  <ul>
+    <li>Account sign-in and subscription status are stored online with our account service provider. We cannot read your password</li>
+    <li>Emergency alerts: when the Dead Man's Switch triggers, an email containing your name, your phone number and a link is sent to your trusted contacts</li>
+    <li>Emergency document sharing: your documents are uploaded to temporary online storage so your trusted contact can download them, and are deleted once downloaded</li>
+    <li>Emergency Document QR: one document is copied to that storage and a link to it is placed in a QR code. Anyone who has the QR code can open that document, so share it only with someone you trust</li>
+    <li>AI features: the text or voice audio you submit is sent through our server to an AI service provider</li>
+    <li>Payments are handled by PayPal</li>
+  </ul>
+
+  <h2>5. The Dead Man's Switch, Explained</h2>
+  <p>The Dead Man's Switch is designed to give specific people access to your documents if you become unreachable for a period you define:</p>
+  <ul>
+    <li>The app monitors your check-in activity locally, based on your chosen inactivity period</li>
+    <li>If you miss check-ins, the app needs internet to send your trusted contacts an emergency email and to upload your documents to temporary online storage</li>
+    <li>Your contact must call you twice and wait 24 hours in the app, giving you a final chance to cancel if you are simply unreachable</li>
+    <li>The app shows the documents to your contact only after that wait. Files are deleted from our storage once the contact has downloaded them</li>
+    <li>Outside of this emergency workflow, your vault is not transmitted anywhere</li>
+  </ul>
+
+  <h2>6. Optional AI Features</h2>
+  <p>AI chat, voice questions, the AI Image Generator and the AI Travel Guide use a third-party AI service provider for processing. When you use them:</p>
+  <ul>
+    <li>Only the input you provide to that feature (for example, your text or voice audio) is sent — the app does not send your vault contents</li>
+    <li>You can use the entire core app, including the vault, Dead Man's Switch and document storage, without using these AI features</li>
+    <li>Built-in guidance about the app works offline</li>
+  </ul>
+
+  <h2>7. Reporting a Security Issue</h2>
+  <p>Found a security vulnerability? Please report it privately to us before disclosing it publicly, so we can investigate and fix it first.</p>
+
+  <div class="contact-box">
+    <h3>&#128231; Questions About This Whitepaper</h3>
+    <p style="color:var(--soft);font-size:.85rem;line-height:1.75;">
+      &#9993; General &amp; security reports: <a href="mailto:support@digitalwilllocker.com">support@digitalwilllocker.com</a><br><br>
+      For details on data handling and your privacy rights, see our <a href="privacy-policy.html">Privacy Policy</a>.
+    </p>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Digital Will Locker. All rights reserved. |
+    <a href="index.html">Home</a> &middot;
+    <a href="privacy-policy.html">Privacy Policy</a> &middot;
+    <a href="terms.html">Terms of Service</a>
+  </p>
+</footer>
+</body>
+</html>
